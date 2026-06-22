@@ -1,19 +1,13 @@
-¡Excelente iniciativa! Transformar ese diseño estático estilo "Tiling Window Manager" y terminal a un proyecto estructurado en **SvelteKit** es el paso lógico para hacerlo escalable, mantenible y ultrarrápido (haciendo honor a la filosofía *Antigravity*).
+# `plan.md`
 
-A continuación, te presento la estructura recomendada para tu archivo `plan.md`. Está diseñado siguiendo las mejores prácticas de SvelteKit (componentización, enrutamiento basado en archivos) e incluye la integración de un motor de markdown para tus blogs.
-
----
-
-# `plan.md` - Antigravity CLI Portfolio
-
-Este documento define la hoja de ruta para el desarrollo del portafolio **Antigravity CLI** utilizando SvelteKit, Tailwind CSS y buenas prácticas de ingeniería de software.
+Este documento define la hoja de ruta para el desarrollo del portafolio utilizando SvelteKit, Tailwind CSS y buenas prácticas de ingeniería de software.
 
 ## Fase 1: Inicialización y Configuración Base (El "Bare Metal")
 
 El objetivo aquí es preparar el entorno de desarrollo con todas las herramientas de calidad de código y diseño.
 
 * **Paso 1: Scaffolding de SvelteKit**
-* Inicializar el proyecto con `npm create svelte@latest antigravity-cli`.
+* Inicializar el proyecto con `npm create svelte@latest`.
 * Seleccionar *Skeleton project*.
 * Habilitar **TypeScript** (recomendado para proyectos a largo plazo) o JSDoc.
 * Añadir **ESLint** y **Prettier** durante la configuración para asegurar la calidad del código desde el día 1.
