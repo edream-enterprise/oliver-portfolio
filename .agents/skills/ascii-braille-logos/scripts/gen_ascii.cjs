@@ -14,8 +14,7 @@ const icons = {
     TailwindCSS: si.siTailwindcss?.path,
     Hyprland: si.siHyprland?.path,
     NodeJS: si.siNodedotjs?.path,
-    FastAPI: si.siFastapi?.path,
-    Zsh: si.siZsh?.path
+    FastAPI: si.siFastapi?.path
 };
 
 const WIDTH = 80;
