@@ -25,10 +25,6 @@
 			</li>
 		</ul>
 		<a
-			class="bg-surface-bright text-primary border border-primary/20 font-mono text-[10px] px-4 py-2 mt-6 uppercase inline-block w-max transition-colors hover:bg-primary hover:text-surface hidden"
-			href="/about">[ cat bio_completa.md ]</a
-		>
-		<a
 			class="btn-secondary font-label-sm px-4 py-2 mt-6 uppercase inline-block w-max transition-colors"
 			href="/about">[ cat bio_completa.md ]</a
 		>

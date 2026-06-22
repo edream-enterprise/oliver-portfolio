@@ -43,10 +43,6 @@
 			</p>
 		</article>
 		<a
-			class="bg-primary text-surface font-mono text-[10px] px-6 py-3 mt-6 uppercase inline-block w-max hover:-translate-y-1 transform transition-all hidden"
-			href="/blog">[ ls -l /var/log/todas_las_notas ]</a
-		>
-		<a
 			class="btn-primary font-label-sm px-6 py-3 mt-6 uppercase inline-block w-max hover:-translate-y-1 transform transition-all"
 			href="/blog">[ ls -l /var/log/todas_las_notas ]</a
 		>

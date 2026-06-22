@@ -62,12 +62,6 @@
 						>-&gt; linkedin.com/in/TuUsuario</a
 					>
 				</div>
-				<div class="flex justify-between">
-					<span class="text-primary">mail (Direct)</span>
-					<a class="text-secondary hover:underline" href="mailto:tu_correo_real@dominio.com"
-						>-&gt; tu_correo_real@dominio.com</a
-					>
-				</div>
 			</div>
 			<div class="border-t border-outline-variant my-2"></div>
 			<div class="text-sm space-y-1">
