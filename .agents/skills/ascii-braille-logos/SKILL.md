@@ -38,6 +38,3 @@ You can run or modify it to include any technology found in `simple-icons`.
    node .agents/skills/braille-ascii-logos/scripts/gen_ascii.cjs
    ```
 4. **Use Output**: The script will output an `arts.js` file with the exported templates. You can replace the target UI array with the generated content.
-
-## Text Fallback
-If an icon is missing from `simple-icons` (like AWS due to trademark reasons), the script contains an example of rendering pure text (`fillText`) on the canvas and converting that into Braille, providing an elegant fallback.
