@@ -31,6 +31,6 @@
 		>
 	</div>
 	<div class="font-code-block text-secondary text-sm">
-		v1.9.0-stable [GNU/Linux] © {new Date().getFullYear()} Oliver Alejandro Erazo Reyes.
+		v1.9.0-stable [GNU/Linux] © {new Date().getFullYear()} Oliver Erazo.
 	</div>
 </footer>

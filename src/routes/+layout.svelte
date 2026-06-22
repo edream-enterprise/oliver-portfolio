@@ -10,7 +10,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>Oliver Alejandro Erazo Reyes - Portfolio</title>
+	<title>Oliver Erazo - Portfolio</title>
 </svelte:head>
 
 <Header />
