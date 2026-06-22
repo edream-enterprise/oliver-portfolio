@@ -51,17 +51,23 @@
 			<div class="border-t border-outline-variant my-2"></div>
 			<div class="flex flex-col gap-2 text-sm">
 				<div class="flex justify-between">
-					<span class="text-primary">eth0 (GitHub)</span>
-					<a class="text-secondary hover:underline" href="https://github.com/TuUsuario"
-						>-&gt; github.com/TuUsuario</a
+					<span class="text-primary">github</span>
+					<a class="text-secondary hover:underline" href="https://github.com/10Oliver"
+						>-&gt; curl -s api.github.com/users/10Oliver</a
 					>
 				</div>
 				<div class="flex justify-between">
-					<span class="text-primary">eth1 (LinkedIn)</span>
-					<a class="text-secondary hover:underline" href="https://linkedin.com/in/TuUsuario"
-						>-&gt; linkedin.com/in/TuUsuario</a
+					<span class="text-primary">linkedin</span>
+					<a class="text-secondary hover:underline" href="https://linkedin.com/in/oliver-erazo"
+						>-&gt; xdg-open linkedin.com/in/oliver-erazo</a
 					>
 				</div>
+        <div class="flex justify-between">
+          <span class="text-primary">cv</span>
+          <a class="text-secondary hover:underline">
+            -&gt; cat ~/docs/cv_oliver.md
+          </a>
+        </div>
 			</div>
 			<div class="border-t border-outline-variant my-2"></div>
 			<div class="text-sm space-y-1">
