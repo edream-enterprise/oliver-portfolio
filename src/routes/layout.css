@@ -74,7 +74,7 @@
 
 	/* Font Sizes */
 	--text-label-sm: 13px;
-	--text-label-sm--line-height: 1.0;
+	--text-label-sm--line-height: 1;
 	--text-label-sm--letter-spacing: 0.05em;
 	--text-label-sm--font-weight: 500;
 
@@ -106,7 +106,7 @@
 
 @layer base {
 	body {
-		@apply bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col;
+		@apply flex min-h-screen flex-col bg-background font-body-md text-on-surface antialiased;
 	}
 }
 
@@ -136,7 +136,7 @@
 	}
 
 	.btn-secondary {
-		@apply bg-transparent border border-secondary-container text-secondary transition-all duration-200;
+		@apply border border-secondary-container bg-transparent text-secondary transition-all duration-200;
 	}
 	.btn-secondary:hover {
 		background-color: rgba(4, 73, 141, 0.2);
@@ -144,7 +144,7 @@
 
 	/* Waybar specific styles */
 	.waybar-module {
-		@apply px-2 h-full flex items-center;
+		@apply flex h-full items-center px-2;
 	}
 
 	#neovim-cmd {

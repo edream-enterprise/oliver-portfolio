@@ -57,7 +57,9 @@
 </script>
 
 <div
-	class="fixed bottom-0 left-0 w-full bg-[#141414] border-t border-outline-variant p-2 items-center font-code-block text-primary z-50 {active ? 'flex' : 'hidden'}"
+	class="fixed bottom-0 left-0 w-full bg-[#141414] border-t border-outline-variant p-2 items-center font-code-block text-primary z-50 {active
+		? 'flex'
+		: 'hidden'}"
 >
 	<span>:</span>
 	<input

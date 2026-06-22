@@ -1,0 +1,155 @@
+<script lang="ts">
+	import { onDestroy, onMount } from 'svelte';
+
+	const asciiArts = [
+		`
+ \\\\          //
+  \\\\        //
+   \\\\      //
+    \\\\    //
+     \\\\  //
+      \\\\//
+       \\/
+      VUE.JS
+`,
+		`
+    ________________
+   /               /
+  /   ____________/
+ /   /
+/   /_____________
+\\                 \\
+ \\_____________    \\
+               \\    \\
+  _____________/    /
+ /                 /
+/_________________/
+      SVELTE
+`,
+		`
+       _.-.
+     .'    '.
+    /   __   \\
+   |   /  \\   |
+   |   |  |   |
+   \\   \\__/   /
+    \\        /
+     '.____.'
+      /    \\
+     |      |
+     |      |
+     \\      /
+      '----'
+      LINUX
+`,
+		`
+       ________
+      /       /
+     /       /
+    /       /_____
+   /              \\
+  /________        \\
+           \\       /
+            \\     /
+             \\   /
+              \\ /
+            FASTAPI
+`,
+		`
+       ~~         ~~~
+     ~~~         ~~~~
+   ~~~~         ~~~~
+  ~~~~         ~~~~
+ ~~~~         ~~~~
+~~~~         ~~~~
+ ~~~~       ~~~~
+  ~~~~     ~~~~
+    ~~~   ~~~
+    TAILWIND
+`,
+		`
+     ___      ___
+    |   \\    /   |
+    |    \\  /    |
+    |  |\\ \\/ /|  |
+    |  | \\  / |  |
+    |  |  \\/  |  |
+    |__|      |__|
+       NEOVIM
+`,
+		`
+    ______________
+   |              |
+   |   ________   |
+   |      / /     |
+   |     / /      |
+   |    /_/       |
+   |              |
+   |______________|
+         ZSH
+`,
+		`
+          ##
+  ## ## ##       ==
+ ## ## ## ##    ===
+ /"""""""""""""\\___/ ===
+ {                  / ===-
+  \\______ O        /
+   \\____\\_________/
+        DOCKER
+`
+	];
+
+	let artIndex = $state(0);
+	let intervalId: ReturnType<typeof setInterval>;
+
+	onMount(() => {
+		intervalId = setInterval(() => {
+			artIndex = (artIndex + 1) % asciiArts.length;
+		}, 4000);
+	});
+
+	onDestroy(() => {
+		if (intervalId) clearInterval(intervalId);
+	});
+
+	const scrollToSection = (id: string) => {
+		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+	};
+</script>
+
+<section
+	class="py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-b border-outline-variant"
+>
+	<div class="flex flex-col gap-6">
+		<div class="font-code-block text-secondary opacity-80">oliver@linux:~$ ./whoami.sh</div>
+		<h1
+			class="text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] tracking-tight font-bold font-['JetBrains_Mono'] text-primary uppercase"
+		>
+			Oliver Alejandro Erazo Reyes
+		</h1>
+		<p class="font-body-lg text-on-surface-variant uppercase tracking-wide">
+			Building high-performance, scalable architectures in Linux.
+		</p>
+		<div class="flex gap-4 mt-4">
+			<button
+				class="btn-primary font-label-sm px-6 py-3 uppercase rounded-none"
+				onclick={() => scrollToSection('stack')}
+			>
+				[ cd ./stack ]
+			</button>
+			<button
+				class="btn-secondary font-label-sm px-6 py-3 uppercase rounded-none"
+				onclick={() => scrollToSection('contact')}
+			>
+				[ ./contact.sh ]
+			</button>
+		</div>
+	</div>
+	<div class="flex justify-center md:justify-end md:pr-12 lg:pr-24 min-h-[300px]">
+		<pre
+			class="font-code-block text-primary drop-shadow-[0_0_15px_rgba(255,86,43,0.3)] leading-tight text-xs md:text-sm">{asciiArts[
+				artIndex
+			]}</pre>
+	</div>
+</section>
