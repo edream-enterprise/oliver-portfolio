@@ -13,7 +13,8 @@ const icons = {
     NeoVim: si.siNeovim?.path,
     TailwindCSS: si.siTailwindcss?.path,
     Hyprland: si.siHyprland?.path,
-    NodeJS: si.siNodedotjs?.path
+    NodeJS: si.siNodedotjs?.path,
+    FastAPI: si.siFastapi?.path
 };
 
 const WIDTH = 80;
@@ -69,19 +70,8 @@ async function main() {
         let braille = generateBraille(ctx);
         code += `\t\`\n${braille}\n\t\`,\n`;
     }
-    
-    // Custom AWS
-    const AWS_WIDTH = 100;
-    const canvasAws = createCanvas(AWS_WIDTH, HEIGHT);
-    const ctxAws = canvasAws.getContext('2d');
-    ctxAws.font = 'bold 30px Arial';
-    ctxAws.textAlign = 'center';
-    ctxAws.textBaseline = 'middle';
-    // Shift slightly down (+2px) because standard fonts have ascent bounds that push the visual weight up
-    ctxAws.fillText('AWS', AWS_WIDTH/2, HEIGHT/2 + 2);
-    let brailleAws = generateBraille(ctxAws, AWS_WIDTH, HEIGHT);
-    code += `\t\`\n${brailleAws}\n\t\`\n`;
 
+    code = code.replace(/,\n$/, '\n');
     code += "];\n";
     fs.writeFileSync('arts.js', code);
     console.log("Done");
