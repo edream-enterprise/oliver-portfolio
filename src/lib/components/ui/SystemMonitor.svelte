@@ -65,6 +65,9 @@
 				<div>
 					<span class="text-secondary font-bold">Memory:</span> 120MB / 16384MB
 				</div>
+				<div>
+					<span class="text-secondary font-bold">Themes:</span> 3 loaded ... 1 encrypted
+				</div>
 				
 				<div class="flex gap-1 mt-3">
 					<div class="w-4 h-4 bg-background"></div>

@@ -2,7 +2,8 @@ export const globalState = $state({
 	theme: 'default',
 	language: 'en',
 	systemMonitorOpen: false,
-	themeDropdownOpen: false
+	themeDropdownOpen: false,
+	helpModalOpen: false
 });
 
 // Helper functions to manage state
@@ -19,6 +20,7 @@ export function toggleSystemMonitor() {
 	// Close dropdown if open
 	if (globalState.systemMonitorOpen) {
 		globalState.themeDropdownOpen = false;
+		globalState.helpModalOpen = false;
 	}
 }
 
@@ -27,5 +29,14 @@ export function toggleThemeDropdown() {
 	// Close monitor if open
 	if (globalState.themeDropdownOpen) {
 		globalState.systemMonitorOpen = false;
+		globalState.helpModalOpen = false;
+	}
+}
+
+export function toggleHelpModal() {
+	globalState.helpModalOpen = !globalState.helpModalOpen;
+	if (globalState.helpModalOpen) {
+		globalState.systemMonitorOpen = false;
+		globalState.themeDropdownOpen = false;
 	}
 }

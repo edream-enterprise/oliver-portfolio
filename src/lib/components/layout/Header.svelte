@@ -3,7 +3,7 @@
 
 	function openNeovim() {
 		if (typeof window !== 'undefined') {
-			window.dispatchEvent(new CustomEvent('neovim-toggle'));
+			window.dispatchEvent(new CustomEvent('neovim-preset', { detail: 'help' }));
 		}
 	}
 </script>

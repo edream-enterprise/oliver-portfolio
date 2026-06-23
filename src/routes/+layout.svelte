@@ -6,6 +6,7 @@
 	import NeovimCmd from '$lib/components/layout/NeovimCmd.svelte';
 	import SystemMonitor from '$lib/components/ui/SystemMonitor.svelte';
 	import ThemeDropdown from '$lib/components/ui/ThemeDropdown.svelte';
+	import HelpModal from '$lib/components/ui/HelpModal.svelte';
 	import { globalState } from '$lib/state.svelte';
 
 	let { children } = $props();
@@ -13,6 +14,11 @@
 	$effect(() => {
 		if (typeof document !== 'undefined') {
 			document.documentElement.className = globalState.theme === 'default' ? '' : `theme-${globalState.theme}`;
+			
+			// Matrix Easter Egg Hint
+			if (globalState.theme === 'default') {
+				console.log('%cWake up, Oliver... The Matrix has you. Try the terminal: :colorscheme matrix', 'color: #00ff00; font-weight: bold; font-family: monospace;');
+			}
 		}
 	});
 </script>
@@ -30,3 +36,4 @@
 <NeovimCmd />
 <SystemMonitor />
 <ThemeDropdown />
+<HelpModal />

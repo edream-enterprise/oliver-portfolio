@@ -26,10 +26,23 @@
 		setTimeout(() => inputRef?.focus(), 0);
 	}
 
+	function handlePresetEvent(e: CustomEvent) {
+		active = true;
+		command = e.detail;
+		setTimeout(() => inputRef?.focus(), 0);
+	}
+
 	function executeCommand(e: KeyboardEvent) {
 		if (e.key === 'Enter') {
 			const val = command.trim().toLowerCase();
 			if (val === 'q') {
+				active = false;
+			} else if (val === 'help') {
+				if (typeof window !== 'undefined') {
+					import('$lib/state.svelte').then(({ toggleHelpModal }) => {
+						toggleHelpModal();
+					});
+				}
 				active = false;
 			} else if (val.startsWith('colorscheme ')) {
 				const theme = val.split(' ')[1];
@@ -59,12 +72,14 @@
 	onMount(() => {
 		window.addEventListener('keydown', handleKeydown);
 		window.addEventListener('neovim-toggle', handleToggleEvent as EventListener);
+		window.addEventListener('neovim-preset', handlePresetEvent as EventListener);
 	});
 
 	onDestroy(() => {
 		if (typeof window !== 'undefined') {
 			window.removeEventListener('keydown', handleKeydown);
 			window.removeEventListener('neovim-toggle', handleToggleEvent as EventListener);
+			window.removeEventListener('neovim-preset', handlePresetEvent as EventListener);
 		}
 	});
 </script>
