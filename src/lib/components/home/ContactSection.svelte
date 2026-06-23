@@ -64,7 +64,7 @@
 				</div>
         <div class="flex justify-between">
           <span class="text-primary">cv</span>
-          <a class="text-secondary hover:underline">
+          <a href="/about" class="text-secondary hover:underline">
             -&gt; cat ~/docs/cv_oliver.md
           </a>
         </div>
