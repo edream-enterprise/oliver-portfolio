@@ -105,6 +105,9 @@
 }
 
 @layer base {
+	html {
+		scroll-behavior: smooth;
+	}
 	body {
 		@apply flex min-h-screen flex-col bg-background font-body-md text-on-surface antialiased;
 	}

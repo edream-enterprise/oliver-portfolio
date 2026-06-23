@@ -9,27 +9,27 @@
 	</div>
 	<nav class="hidden md:flex items-center h-full gap-4">
 		<a
-			class="font-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200"
+			class="font-label-sm text-on-surface-variant hover:bg-primary-container hover:text-white transition-all duration-200 hover:brightness-110 px-3 py-1"
 			href="/#projects">Projects</a
 		>
 		<a
-			class="font-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200"
+			class="font-label-sm text-on-surface-variant hover:bg-primary-container hover:text-white transition-all duration-200 hover:brightness-110 px-3 py-1"
 			href="/#architecture">Architecture</a
 		>
 		<a
-			class="font-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200"
+			class="font-label-sm text-on-surface-variant hover:bg-secondary-container hover:text-white transition-all duration-200 hover:brightness-110 px-3 py-1"
 			href="/about">Profile</a
 		>
 		<a
-			class="font-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200"
+			class="font-label-sm text-on-surface-variant hover:bg-primary-container hover:text-white transition-all duration-200 hover:brightness-110 px-3 py-1"
 			href="/#experience">Experience</a
 		>
 		<a
-			class="font-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200"
+			class="font-label-sm text-on-surface-variant hover:bg-primary-container hover:text-white transition-all duration-200 hover:brightness-110 px-3 py-1"
 			href="/#stack">Stack</a
 		>
 		<a
-			class="font-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200"
+			class="font-label-sm text-on-surface-variant hover:bg-secondary-container hover:text-white transition-all duration-200 hover:brightness-110 px-3 py-1"
 			href="/blog">Garden</a
 		>
 	</nav>
