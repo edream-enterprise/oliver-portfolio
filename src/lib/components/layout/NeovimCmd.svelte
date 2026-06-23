@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import { onMount, onDestroy } from 'svelte';
 
 	let active = $state(false);
@@ -33,7 +34,11 @@
 			} else if (val.startsWith('e ')) {
 				const dest = val.split(' ')[1];
 				if (['stack', 'architecture', 'projects', 'experience', 'contact'].includes(dest)) {
-					goto(`/#${dest}`);
+					if ($page.url.pathname === '/') {
+						document.getElementById(dest)?.scrollIntoView({ behavior: 'smooth' });
+					} else {
+						goto(`/#${dest}`);
+					}
 				} else if (['about', 'blog'].includes(dest)) {
 					goto(`/${dest}`);
 				}
