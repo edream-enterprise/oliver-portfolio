@@ -31,6 +31,14 @@
 			const val = command.trim().toLowerCase();
 			if (val === 'q') {
 				active = false;
+			} else if (val.startsWith('colorscheme ')) {
+				const theme = val.split(' ')[1];
+				if (typeof window !== 'undefined') {
+					import('$lib/state.svelte').then(({ setTheme }) => {
+						setTheme(theme);
+					});
+				}
+				active = false;
 			} else if (val.startsWith('e ')) {
 				const dest = val.split(' ')[1];
 				if (['stack', 'architecture', 'projects', 'experience', 'contact'].includes(dest)) {
@@ -62,7 +70,7 @@
 </script>
 
 <div
-	class="fixed bottom-0 left-0 w-full bg-[#141414] border-t border-outline-variant p-2 items-center font-code-block text-primary z-50 {active
+	class="fixed bottom-0 left-0 w-full bg-surface border-t border-outline-variant p-2 items-center font-code-block text-primary z-50 {active
 		? 'flex'
 		: 'hidden'}"
 >

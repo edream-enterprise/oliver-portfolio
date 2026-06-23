@@ -20,7 +20,7 @@
 		</div>
 	</div>
 
-	<div class="bg-[#141414] pane-border pane-glow-secondary p-6 md:p-8">
+	<div class="bg-surface pane-border pane-glow-secondary p-6 md:p-8">
 		<article class="prose prose-invert prose-p:font-body-md prose-headings:font-headline-sm prose-a:text-primary prose-pre:bg-black max-w-none">
 			<Content />
 		</article>

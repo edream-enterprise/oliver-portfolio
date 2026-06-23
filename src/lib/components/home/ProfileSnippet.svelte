@@ -6,7 +6,7 @@
 		<span class="material-symbols-outlined text-primary" aria-hidden="true">person</span>
 		<h2 class="font-headline-md text-primary">/etc/profile</h2>
 	</div>
-	<div class="bg-[#141414] pane-border p-6 flex flex-col gap-4">
+	<div class="bg-surface pane-border p-6 flex flex-col gap-4">
 		<p class="font-body-lg text-on-surface">
 			Philosophy: Simplicity is the ultimate sophistication. Prefer tools that do one thing well.
 		</p>

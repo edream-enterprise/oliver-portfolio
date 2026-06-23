@@ -7,7 +7,7 @@
 		<h2 class="font-headline-md text-primary">/usr/bin/contact</h2>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-		<div class="bg-[#141414] pane-border p-6 rounded-none flex flex-col">
+		<div class="bg-surface pane-border p-6 rounded-none flex flex-col">
 			<div class="font-code-block text-secondary mb-6 opacity-80">
 				$ echo "Let's build something." &gt; contact.txt
 			</div>
@@ -15,7 +15,7 @@
 				<div class="flex flex-col gap-2">
 					<label class="text-primary" for="nombre">$NOMBRE</label>
 					<input
-						class="bg-[#0a0a0a] pane-border text-on-surface p-2 outline-none focus:border-primary transition-colors"
+						class="bg-background pane-border text-on-surface p-2 outline-none focus:border-primary transition-colors"
 						id="nombre"
 						type="text"
 					/>
@@ -23,7 +23,7 @@
 				<div class="flex flex-col gap-2">
 					<label class="text-primary" for="email">$EMAIL</label>
 					<input
-						class="bg-[#0a0a0a] pane-border text-on-surface p-2 outline-none focus:border-primary transition-colors"
+						class="bg-background pane-border text-on-surface p-2 outline-none focus:border-primary transition-colors"
 						id="email"
 						type="email"
 					/>
@@ -31,7 +31,7 @@
 				<div class="flex flex-col gap-2">
 					<label class="text-primary" for="mensaje">Mensaje: STDIN</label>
 					<textarea
-						class="bg-[#0a0a0a] pane-border text-on-surface p-2 outline-none focus:border-primary transition-colors h-32 resize-none"
+						class="bg-background pane-border text-on-surface p-2 outline-none focus:border-primary transition-colors h-32 resize-none"
 						id="mensaje"></textarea>
 				</div>
 				<button
@@ -42,7 +42,7 @@
 				</button>
 			</form>
 		</div>
-		<div class="bg-[#141414] pane-border p-6 rounded-none flex flex-col gap-4 font-code-block">
+		<div class="bg-surface pane-border p-6 rounded-none flex flex-col gap-4 font-code-block">
 			<h3 class="text-primary font-bold">[ NETWORK INTERFACES &amp; SYS_INFO ]</h3>
 			<div class="text-on-surface-variant text-sm">
 				<p><span class="text-secondary">&gt;</span> ping -c 1 oliver.dev</p>

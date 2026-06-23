@@ -16,7 +16,7 @@
 	<div class="flex flex-col gap-4">
 		{#each data.posts as post}
 			<a href="/blog/{post.slug}" class="block group">
-				<article class="p-6 bg-[#141414] pane-border pane-glow-primary group-hover:-translate-y-1 transform transition-all rounded-none">
+				<article class="p-6 bg-surface pane-border pane-glow-primary group-hover:-translate-y-1 transform transition-all rounded-none">
 					<div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-2">
 						<h2 class="font-headline-md text-on-surface group-hover:text-primary transition-colors uppercase">
 							{post.title}

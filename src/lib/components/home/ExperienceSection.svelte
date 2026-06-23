@@ -6,7 +6,7 @@
 		<span class="material-symbols-outlined text-primary" aria-hidden="true">work_history</span>
 		<h2 class="font-headline-md text-primary">/var/log/work_history.log</h2>
 	</div>
-	<div class="bg-[#141414] pane-border p-6">
+	<div class="bg-surface pane-border p-6">
 		<div class="border-l border-outline-variant ml-3 space-y-8">
 			<div
 				class="relative pl-6 before:absolute before:-left-[5px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-none"

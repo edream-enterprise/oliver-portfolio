@@ -4,8 +4,17 @@
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import NeovimCmd from '$lib/components/layout/NeovimCmd.svelte';
+	import SystemMonitor from '$lib/components/ui/SystemMonitor.svelte';
+	import ThemeDropdown from '$lib/components/ui/ThemeDropdown.svelte';
+	import { globalState } from '$lib/state.svelte';
 
 	let { children } = $props();
+
+	$effect(() => {
+		if (typeof document !== 'undefined') {
+			document.documentElement.className = globalState.theme === 'default' ? '' : `theme-${globalState.theme}`;
+		}
+	});
 </script>
 
 <svelte:head>
@@ -19,3 +28,5 @@
 </main>
 <Footer />
 <NeovimCmd />
+<SystemMonitor />
+<ThemeDropdown />

@@ -9,7 +9,7 @@
 	<div class="flex flex-col gap-4">
 		<!-- Blog Post 1 -->
 		<article
-			class="p-6 bg-[#141414] pane-border pane-glow-primary group cursor-pointer rounded-none"
+			class="p-6 bg-surface pane-border pane-glow-primary group cursor-pointer rounded-none"
 		>
 			<div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-2">
 				<h3
@@ -26,7 +26,7 @@
 		</article>
 		<!-- Blog Post 2 -->
 		<article
-			class="p-6 bg-[#141414] pane-border pane-glow-primary group cursor-pointer rounded-none"
+			class="p-6 bg-surface pane-border pane-glow-primary group cursor-pointer rounded-none"
 		>
 			<div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-2">
 				<h3

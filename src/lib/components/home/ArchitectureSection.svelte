@@ -8,7 +8,7 @@
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 		<!-- Arch Card 1 -->
-		<div class="flex flex-col bg-[#141414] pane-border pane-glow-secondary p-6">
+		<div class="flex flex-col bg-surface pane-border pane-glow-secondary p-6">
 			<h3 class="font-headline-md text-secondary mb-4">[ FRONTEND ]</h3>
 			<p class="font-body-md text-on-surface-variant">
 				Vue &amp; Svelte mastery. Building reactive, lightweight UIs that communicate seamlessly
@@ -16,7 +16,7 @@
 			</p>
 		</div>
 		<!-- Arch Card 2 -->
-		<div class="flex flex-col bg-[#141414] pane-border pane-glow-secondary p-6">
+		<div class="flex flex-col bg-surface pane-border pane-glow-secondary p-6">
 			<h3 class="font-headline-md text-secondary mb-4">[ BACKEND ]</h3>
 			<p class="font-body-md text-on-surface-variant">
 				FastAPI &amp; Rust. High-throughput data processing, robust API design, and system-level
@@ -24,7 +24,7 @@
 			</p>
 		</div>
 		<!-- Arch Card 3 -->
-		<div class="flex flex-col bg-[#141414] pane-border pane-glow-secondary p-6">
+		<div class="flex flex-col bg-surface pane-border pane-glow-secondary p-6">
 			<h3 class="font-headline-md text-secondary mb-4">[ DEVOPS ]</h3>
 			<p class="font-body-md text-on-surface-variant">
 				Alma Linux, Podman, &amp; CI/CD. Managing rootless container deployments and maintaining

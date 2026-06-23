@@ -7,7 +7,7 @@
 </script>
 
 <footer
-	class="w-full py-margin-page px-gutter flex flex-col md:flex-row justify-between items-center gap-4 bg-[#141414] border-t border-outline-variant mt-auto"
+	class="w-full py-margin-page px-gutter flex flex-col md:flex-row justify-between items-center gap-4 bg-surface border-t border-outline-variant mt-auto"
 >
 	<div class="font-label-sm text-on-surface flex gap-6">
 		<a

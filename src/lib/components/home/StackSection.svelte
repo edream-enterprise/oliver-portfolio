@@ -9,7 +9,7 @@
 				<span class="material-symbols-outlined text-primary" aria-hidden="true">code</span>
 				<h2 class="font-headline-md text-primary">~/.config/stack/development.json</h2>
 			</div>
-			<div class="bg-[#0f0f0f] pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">
+			<div class="bg-surface-dim pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">
 				<pre class="font-code-block text-on-surface-variant"><span class="text-on-surface-variant"
 						>&#123;</span
 					>
@@ -70,7 +70,7 @@
 				<span class="material-symbols-outlined text-primary" aria-hidden="true">dns</span>
 				<h2 class="font-headline-md text-primary">~/.config/stack/infrastructure.json</h2>
 			</div>
-			<div class="bg-[#0f0f0f] pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">
+			<div class="bg-surface-dim pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">
 				<pre class="font-code-block text-on-surface-variant"><span class="text-on-surface-variant"
 						>&#123;</span
 					>

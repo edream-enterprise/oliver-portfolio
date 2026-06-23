@@ -111,6 +111,64 @@
 	body {
 		@apply flex min-h-screen flex-col bg-background font-body-md text-on-surface antialiased;
 	}
+
+	:root.theme-dracula {
+		--color-background: #282a36;
+		--color-surface: #44475a;
+		--color-surface-dim: #21222c;
+		--color-on-surface: #f8f8f2;
+		--color-primary: #ff79c6;
+		--color-primary-container: #ff79c6;
+		--color-secondary-container: #bd93f9;
+		--color-on-background: #f8f8f2;
+		--color-outline-variant: #6272a4;
+	}
+
+	:root.theme-gruvbox {
+		--color-background: #282828;
+		--color-surface: #3c3836;
+		--color-surface-dim: #32302f;
+		--color-on-surface: #ebdbb2;
+		--color-primary: #fe8019;
+		--color-primary-container: #fe8019;
+		--color-secondary-container: #b8bb26;
+		--color-on-background: #ebdbb2;
+		--color-outline-variant: #a89984;
+	}
+
+	:root.theme-matrix {
+		--color-background: #0d0d0d;
+		--color-surface: #1a1a1a;
+		--color-surface-dim: #050505;
+		--color-on-surface: #00ff41;
+		--color-primary: #00ff41;
+		--color-primary-container: #006600; /* Dark green so white text is visible */
+		--color-secondary-container: #00ffff; /* Changed from dark green to neon cyan */
+		--color-on-background: #00ff41;
+		--color-outline-variant: #004400;
+		--color-surface-variant: #111111;
+		--color-on-surface-variant: #00cc33;
+		--color-error: #00ffff; /* JSON strings might be picking up error or tertiary colors */
+		--color-error-container: #005555;
+		--color-tertiary: #00ffff;
+	}
+
+	:root.theme-light {
+		--color-background: #f4f7fc; /* Very light blue almost white */
+		--color-surface: #e8ecf4; /* Slightly darker light blue for cards */
+		--color-surface-dim: #dde3f0; /* Darker than surface for code blocks */
+		--color-on-surface: #334155;
+		--color-primary: #2563eb;
+		--color-primary-container: #2563eb;
+		--color-on-primary-container: #ffffff;
+		--color-secondary-container: #8b5cf6; /* Vibrant purple so it stands out */
+		--color-secondary: #8b5cf6;
+		--color-on-background: #334155;
+		--color-outline-variant: #cbd5e1;
+		--color-surface-variant: #f1f5f9;
+		--color-on-surface-variant: #475569;
+		--color-error: #ef4444;
+	}
 }
 
 @layer components {

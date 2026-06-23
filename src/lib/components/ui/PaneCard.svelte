@@ -16,6 +16,6 @@
 	);
 </script>
 
-<div class="flex flex-col bg-[#141414] pane-border {glowClass} p-6 {className}">
+<div class="flex flex-col bg-surface pane-border {glowClass} p-6 {className}">
 	{@render children()}
 </div>
