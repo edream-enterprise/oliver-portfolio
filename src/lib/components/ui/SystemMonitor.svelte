@@ -60,7 +60,7 @@
 				<div><span class="text-secondary font-bold">OS:</span> SvelteKit 5</div>
 				<div><span class="text-secondary font-bold">WM:</span> TailwindCSS 4</div>
 				<div><span class="text-secondary font-bold">Shell:</span> TypeScript</div>
-				<div><span class="text-secondary font-bold">Terminal:</span> Antigravity CLI</div>
+				<div><span class="text-secondary font-bold">Terminal:</span> Zsh + Oh My Zsh</div>
 				<div><span class="text-secondary font-bold">Uptime:</span> {formatUptime(uptime)}</div>
 				<div>
 					<span class="text-secondary font-bold">Memory:</span> 120MB / 16384MB
