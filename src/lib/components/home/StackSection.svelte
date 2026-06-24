@@ -22,9 +22,7 @@
 					> <span class="text-secondary">"Python"</span><span class="text-on-surface-variant"
 						>,</span
 					>
-    <span class="text-secondary">"PHP"</span><span class="text-on-surface-variant">,</span> <span
-						class="text-secondary">"Rust"</span
-					>
+    <span class="text-secondary">"PHP"</span>
   <span class="text-on-surface-variant">],</span>
   <span class="text-primary">"frontend_frameworks"</span><span class="text-on-surface-variant"
 						>:</span
@@ -32,9 +30,8 @@
     <span class="text-secondary">"Vue"</span><span class="text-on-surface-variant">,</span> <span
 						class="text-secondary">"Svelte"</span
 					><span class="text-on-surface-variant">,</span> <span class="text-secondary">"React"</span
-					><span class="text-on-surface-variant">,</span> <span class="text-secondary">"Next"</span
-					><span class="text-on-surface-variant">,</span>
-    <span class="text-secondary">"Nuxt"</span><span class="text-on-surface-variant">,</span> <span
+					><span class="text-on-surface-variant">,</span> <span class="text-secondary">"Nuxt"</span><span class="text-on-surface-variant">,</span>
+     <span
 						class="text-secondary">"SvelteKit"</span
 					>
   <span class="text-on-surface-variant">],</span>

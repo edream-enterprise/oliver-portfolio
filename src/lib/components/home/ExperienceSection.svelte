@@ -11,23 +11,23 @@
 			<div
 				class="relative pl-6 before:absolute before:-left-[5px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-none"
 			>
-				<div class="font-code-block text-secondary text-sm mb-1">[ 2024 - 2026 ]</div>
+				<div class="font-code-block text-secondary text-sm mb-1">[ 2024 - present ]</div>
 				<h3 class="text-primary font-headline-md uppercase mb-2">
-					Full Stack &amp; SysAdmin Engineer
+					FULL STACK WEB DEVELOPER @ Secretaría de Innovación de la Presidencia
 				</h3>
 				<p class="font-body-md text-on-surface-variant">
-					Desarrollo de aplicaciones web de alto rendimiento (Frontend y Backend). Administración de
-					servidores Linux, configuración de VPS y orquestación de contenedores (Docker/Podman).
+					Engineered and optimized full-stack solutions using Vue.js and Laravel to enhance internal project management and data reporting. Streamlined developer workflows and eliminated environment inconsistencies by implementing Docker containerization for seamless deployments.
 				</p>
 			</div>
 			<div
 				class="relative pl-6 before:absolute before:-left-[5px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-none"
 			>
 				<div class="font-code-block text-secondary text-sm mb-1">[ 2022 - 2024 ]</div>
-				<h3 class="text-primary font-headline-md uppercase mb-2">Frontend Developer</h3>
+				<h3 class="text-primary font-headline-md uppercase mb-2">
+          SOFTWARE DEVELOPER @ Instituto Técnico Ricaldone
+        </h3>
 				<p class="font-body-md text-on-surface-variant">
-					Creación de interfaces reactivas y optimización de UX/UI usando el ecosistema de Vue y
-					React. Consumo de APIs RESTful y control de versiones.
+					Developed and maintained robust RESTful APIs using FastAPI and Express, ensuring 99.9% uptime. Improved the user experience for over 1,000 students by refactoring Vue UI components, while securely administering Moodle, Google, and Microsoft cloud platforms.
 				</p>
 			</div>
 		</div>

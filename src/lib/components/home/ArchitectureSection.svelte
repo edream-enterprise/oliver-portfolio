@@ -11,7 +11,7 @@
 		<div class="flex flex-col bg-surface pane-border pane-glow-secondary p-6">
 			<h3 class="font-headline-md text-secondary mb-4">[ FRONTEND ]</h3>
 			<p class="font-body-md text-on-surface-variant">
-				Vue &amp; Svelte mastery. Building reactive, lightweight UIs that communicate seamlessly
+				Vue.hs and experience with React and Svelte. Building reactive, lightweight UIs that communicate seamlessly
 				with complex backends.
 			</p>
 		</div>
@@ -19,7 +19,7 @@
 		<div class="flex flex-col bg-surface pane-border pane-glow-secondary p-6">
 			<h3 class="font-headline-md text-secondary mb-4">[ BACKEND ]</h3>
 			<p class="font-body-md text-on-surface-variant">
-				FastAPI &amp; Rust. High-throughput data processing, robust API design, and system-level
+				FastAPI &amp; Node.js. High-throughput data processing, robust API design, and system-level
 				performance.
 			</p>
 		</div>
@@ -27,8 +27,7 @@
 		<div class="flex flex-col bg-surface pane-border pane-glow-secondary p-6">
 			<h3 class="font-headline-md text-secondary mb-4">[ DEVOPS ]</h3>
 			<p class="font-body-md text-on-surface-variant">
-				Alma Linux, Podman, &amp; CI/CD. Managing rootless container deployments and maintaining
-				bare-metal servers.
+				Alma Linux, Podman/Docker, &amp; CI/CD. Deployment management in high-impact technology infrastructures.
 			</p>
 		</div>
 	</div>
