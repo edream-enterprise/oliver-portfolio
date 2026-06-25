@@ -1,0 +1,55 @@
+Plan para implementar Internacionalización (i18n) en Oliver Portfolio
+
+1. Elegir una librería de i18n
+Para SvelteKit, las opciones más populares y recomendadas son:
+- svelte-i18n (Más común, fácil de configurar)
+- typesafe-i18n (Excelente para TypeScript, evita errores tipográficos)
+- paraglide-js (Muy moderna, recomendada por Inlang)
+
+2. Estructura de Diccionarios (Archivos de traducción)
+Crear una carpeta `src/lib/i18n/` o `src/locales/` que contenga archivos JSON o TS con las traducciones:
+- en.json
+- es.json
+
+Ejemplo `en.json`:
+{
+  "nav": {
+    "projects": "Projects",
+    "architecture": "Architecture",
+    "profile": "Profile"
+  },
+  "hero": {
+    "title": "Backend Developer",
+    "subtitle": "Building scalable systems"
+  }
+}
+
+Ejemplo `es.json`:
+{
+  "nav": {
+    "projects": "Proyectos",
+    "architecture": "Arquitectura",
+    "profile": "Perfil"
+  },
+  "hero": {
+    "title": "Desarrollador Backend",
+    "subtitle": "Construyendo sistemas escalables"
+  }
+}
+
+3. Inicializar la librería en el Layout
+Modificar `src/routes/+layout.svelte` o `src/routes/+layout.ts` para cargar el diccionario correspondiente al idioma inicial (obtenido del navegador o del local storage).
+
+4. Reemplazar Textos Estáticos por Variables de Traducción
+En lugar de escribir texto directamente en los componentes de Svelte, usar el método de traducción provisto por la librería.
+Ejemplo con svelte-i18n:
+`<a href="/#projects">{$_('nav.projects')}</a>`
+
+5. Actualizar el Estado (Toggle de Idioma)
+Al hacer clic en el botón de "translate" del navbar, cambiar el locale activo de la librería (ej. `locale.set('es')`) y persistir esta preferencia en `localStorage` o cookies para futuras visitas.
+
+6. Traducir el contenido de MDsveX (Markdown)
+Para el contenido de /blog, se pueden mantener diferentes archivos markdown por idioma:
+- mi-articulo.en.md
+- mi-articulo.es.md
+O separar el contenido por carpetas `src/lib/content/blog/en/` y `src/lib/content/blog/es/`. La ruta en SvelteKit deberá cargar el archivo correcto según el idioma activo.
