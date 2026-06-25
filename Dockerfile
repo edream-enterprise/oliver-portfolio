@@ -6,6 +6,19 @@ WORKDIR /app
 # Copy dependency definitions
 COPY package.json package-lock.json ./
 
+# Install system dependencies required for native packages like canvas
+RUN apk add --no-cache \
+    python3 \
+    make \
+    g++ \
+    cairo-dev \
+    pango-dev \
+    giflib-dev \
+    pixman-dev \
+    pangomm-dev \
+    libjpeg-turbo-dev \
+    freetype-dev
+
 # Install all dependencies (including devDependencies needed for build)
 RUN npm ci
 
