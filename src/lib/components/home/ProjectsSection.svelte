@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { _ } from 'svelte-i18n';
+
 	let scrollContainer: HTMLElement | undefined = $state();
 
 	const scrollLeft = () => {
@@ -26,19 +28,19 @@
 				class="material-symbols-outlined text-primary"
 				aria-hidden="true">folder_open</span
 			>
-			<h2 class="font-headline-md text-primary">/home/projects</h2>
+			<h2 class="font-headline-md text-primary">{$_('projects.title')}</h2>
 		</div>
 		<div class="flex items-center gap-2 hidden sm:flex">
 			<button
 				class="bg-surface pane-border px-3 py-1 text-primary hover:bg-surface-variant hover:text-secondary transition-colors font-mono focus:outline-none"
-				aria-label="Previous projects"
+				aria-label={$_('projects.prevProjects')}
 				onclick={scrollLeft}
 			>
 				{'<'}
 			</button>
 			<button
 				class="bg-surface pane-border px-3 py-1 text-primary hover:bg-surface-variant hover:text-secondary transition-colors font-mono focus:outline-none"
-				aria-label="Next projects"
+				aria-label={$_('projects.nextProjects')}
 				onclick={scrollRight}
 			>
 				{'>'}
@@ -57,22 +59,18 @@
 			class="flex flex-col w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 snap-start bg-surface pane-border pane-glow-secondary p-6 rounded-none transition-colors hover:border-primary group"
 		>
 			<h3 class="font-headline-md text-secondary mb-4 transition-colors group-hover:text-primary">
-				NEOVIM CONFIG
+				{$_('projects.project1.title')}
 			</h3>
 			<p class="font-body-md text-on-surface-variant mb-4 flex-grow">
-				Minimalist and fast Neovim-based development environment optimized for modern web
-				development (Vue, TS, JS). Features LSP, AI autocompletion (Copilot), advanced Git
-				integration, and ultra-fast searching.
+				{$_('projects.project1.description')}
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
-				<span
-					class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
-					>[Lua]</span
-				>
-				<span
-					class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
-					>[Markdown]</span
-				>
+				{#each $_('projects.project1.tags') as tag}
+					<span
+						class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
+						>[{tag}]</span
+					>
+				{/each}
 			</div>
 		</a>
 		<!-- Card 2 -->
@@ -83,21 +81,18 @@
 			class="flex flex-col w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 snap-start bg-surface pane-border pane-glow-secondary p-6 rounded-none transition-colors hover:border-primary group"
 		>
 			<h3 class="font-headline-md text-secondary mb-4 transition-colors group-hover:text-primary">
-				SVELTE PORTFOLIO
+				{$_('projects.project2.title')}
 			</h3>
 			<p class="font-body-md text-on-surface-variant mb-4 flex-grow">
-				An interactive personal portfolio featuring a terminal and window manager style, developed
-				with SvelteKit; it includes blog posts and a biography in Markdown format.
+				{$_('projects.project2.description')}
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
-				<span
-					class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
-					>[Svelte]</span
-				>
-				<span
-					class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
-					>[Linux]</span
-				>
+				{#each $_('projects.project2.tags') as tag}
+					<span
+						class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
+						>[{tag}]</span
+					>
+				{/each}
 			</div>
 		</a>
 		<!-- Card 3 -->
@@ -110,21 +105,18 @@
 			<h3
 				class="font-headline-md text-secondary mb-4 transition-colors group-hover:text-primary uppercase"
 			>
-				COMMUNITY EVENTS APP
+				{$_('projects.project3.title')}
 			</h3>
 			<p class="font-body-md text-on-surface-variant mb-4 flex-grow">
-				A collaborative mobile application (university project) designed for managing events and
-				attendance tracking. Developed using React Native, Expo, and Firebase.
+				{$_('projects.project3.description')}
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
-				<span
-					class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
-					>[React Native]</span
-				>
-				<span
-					class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
-					>[Firebase]</span
-				>
+				{#each $_('projects.project3.tags') as tag}
+					<span
+						class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
+						>[{tag}]</span
+					>
+				{/each}
 			</div>
 		</a>
 		<!-- Card 4 -->
@@ -137,22 +129,18 @@
 			<h3
 				class="font-headline-md text-secondary mb-4 transition-colors group-hover:text-primary uppercase"
 			>
-				PERSONAL FINANCE APP
+				{$_('projects.project4.title')}
 			</h3>
 			<p class="font-body-md text-on-surface-variant mb-4 flex-grow">
-				A web application for personal finance management, tracking income and expenses. Developed
-				using Laravel 12 and Blade, featuring custom accounts, categories, charts, and 2FA
-				authentication.
+				{$_('projects.project4.description')}
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
-				<span
-					class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
-					>[Laravel]</span
-				>
-				<span
-					class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
-					>[Blade]</span
-				>
+				{#each $_('projects.project4.tags') as tag}
+					<span
+						class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
+						>[{tag}]</span
+					>
+				{/each}
 			</div>
 		</a>
 		<!-- Card 5 -->
@@ -165,25 +153,18 @@
 			<h3
 				class="font-headline-md text-secondary mb-4 transition-colors group-hover:text-primary uppercase"
 			>
-				VUE 3 TEMPLATE
+				{$_('projects.project5.title')}
 			</h3>
 			<p class="font-body-md text-on-surface-variant mb-4 flex-grow">
-				A base template for rapid development of modern web applications using Vue 3 and Vuetify 3.
-				Pre-configured with Pinia for state management and Vue Router.
+				{$_('projects.project5.description')}
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
-				<span
-					class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
-					>[Vue 3]</span
-				>
-				<span
-					class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
-					>[Vuetify]</span
-				>
-				<span
-					class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
-					>[Vite]</span
-				>
+				{#each $_('projects.project5.tags') as tag}
+					<span
+						class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
+						>[{tag}]</span
+					>
+				{/each}
 			</div>
 		</a>
 	</div>
