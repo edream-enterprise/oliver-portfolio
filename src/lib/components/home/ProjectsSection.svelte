@@ -16,10 +16,16 @@
 	};
 </script>
 
-<section class="py-16 border-b border-outline-variant" id="projects">
+<section
+	class="py-16 border-b border-outline-variant"
+	id="projects"
+>
 	<div class="mb-8 flex items-center justify-between">
 		<div class="flex items-center gap-2">
-			<span class="material-symbols-outlined text-primary" aria-hidden="true">folder_open</span>
+			<span
+				class="material-symbols-outlined text-primary"
+				aria-hidden="true">folder_open</span
+			>
 			<h2 class="font-headline-md text-primary">/home/projects</h2>
 		</div>
 		<div class="flex items-center gap-2 hidden sm:flex">
@@ -54,9 +60,9 @@
 				NEOVIM CONFIG
 			</h3>
 			<p class="font-body-md text-on-surface-variant mb-4 flex-grow">
-				Minimalist and fast Neovim-based development environment optimized for modern web development
-				(Vue, TS, JS). Features LSP, AI autocompletion (Copilot), advanced Git integration, and
-				ultra-fast searching.
+				Minimalist and fast Neovim-based development environment optimized for modern web
+				development (Vue, TS, JS). Features LSP, AI autocompletion (Copilot), advanced Git
+				integration, and ultra-fast searching.
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
 				<span
@@ -101,7 +107,9 @@
 			rel="noopener noreferrer"
 			class="flex flex-col w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 snap-start bg-surface pane-border pane-glow-secondary p-6 rounded-none transition-colors hover:border-primary group"
 		>
-			<h3 class="font-headline-md text-secondary mb-4 transition-colors group-hover:text-primary uppercase">
+			<h3
+				class="font-headline-md text-secondary mb-4 transition-colors group-hover:text-primary uppercase"
+			>
 				COMMUNITY EVENTS APP
 			</h3>
 			<p class="font-body-md text-on-surface-variant mb-4 flex-grow">
@@ -126,11 +134,15 @@
 			rel="noopener noreferrer"
 			class="flex flex-col w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 snap-start bg-surface pane-border pane-glow-secondary p-6 rounded-none transition-colors hover:border-primary group"
 		>
-			<h3 class="font-headline-md text-secondary mb-4 transition-colors group-hover:text-primary uppercase">
+			<h3
+				class="font-headline-md text-secondary mb-4 transition-colors group-hover:text-primary uppercase"
+			>
 				PERSONAL FINANCE APP
 			</h3>
 			<p class="font-body-md text-on-surface-variant mb-4 flex-grow">
-				A web application for personal finance management, tracking income and expenses. Developed using Laravel 12 and Blade, featuring custom accounts, categories, charts, and 2FA authentication.
+				A web application for personal finance management, tracking income and expenses. Developed
+				using Laravel 12 and Blade, featuring custom accounts, categories, charts, and 2FA
+				authentication.
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
 				<span
@@ -150,11 +162,14 @@
 			rel="noopener noreferrer"
 			class="flex flex-col w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 snap-start bg-surface pane-border pane-glow-secondary p-6 rounded-none transition-colors hover:border-primary group"
 		>
-			<h3 class="font-headline-md text-secondary mb-4 transition-colors group-hover:text-primary uppercase">
+			<h3
+				class="font-headline-md text-secondary mb-4 transition-colors group-hover:text-primary uppercase"
+			>
 				VUE 3 TEMPLATE
 			</h3>
 			<p class="font-body-md text-on-surface-variant mb-4 flex-grow">
-				A base template for rapid development of modern web applications using Vue 3 and Vuetify 3. Pre-configured with Pinia for state management and Vue Router.
+				A base template for rapid development of modern web applications using Vue 3 and Vuetify 3.
+				Pre-configured with Pinia for state management and Vue Router.
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
 				<span
