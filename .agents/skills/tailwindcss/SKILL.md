@@ -2,6 +2,7 @@
 name: tailwindcss
 description: Best practices for styling with Tailwind CSS.
 ---
+
 # Tailwind CSS Best Practices
 
 - Prioritize utility-first classes for styling components directly in HTML/Svelte templates.
