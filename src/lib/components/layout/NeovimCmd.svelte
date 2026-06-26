@@ -2,6 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { onMount, onDestroy } from 'svelte';
+	import { resolve } from '$app/paths';
 
 	let active = $state(false);
 	let command = $state('');
@@ -58,10 +59,10 @@
 					if ($page.url.pathname === '/') {
 						document.getElementById(dest)?.scrollIntoView({ behavior: 'smooth' });
 					} else {
-						goto(`/#${dest}`);
+						goto(resolve(`/#${dest}`));
 					}
 				} else if (['about', 'blog'].includes(dest)) {
-					goto(`/${dest}`);
+					goto(resolve(`/${dest}`));
 				}
 				active = false;
 			}

@@ -26,7 +26,7 @@
 		>
 			Select Theme
 		</div>
-		{#each themes as theme}
+		{#each themes as theme (theme.id)}
 			<button
 				class="w-full text-left px-4 py-2 hover:bg-primary-container hover:text-white transition-colors duration-150 flex items-center justify-between {globalState.theme ===
 				theme.id

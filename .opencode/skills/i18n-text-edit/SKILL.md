@@ -10,6 +10,7 @@ This skill ensures that all text edits in the Oliver Portfolio project are prope
 ## When to use
 
 Use this skill when:
+
 - Adding new text content to any `.svelte` file
 - Modifying existing text in components
 - Creating new pages with text content
@@ -20,30 +21,32 @@ Use this skill when:
 ### 1. Never hardcode text in components
 
 **Wrong:**
+
 ```svelte
-<h1>Hello World</h1>
-<p>This is a description</p>
+<h1>Hello World</h1><p>This is a description</p>
 ```
 
 **Correct:**
+
 ```svelte
 <script>
 	import { _ } from 'svelte-i18n';
 </script>
 
-<h1>{$_('section.title')}</h1>
-<p>{$_('section.description')}</p>
+<h1>{$_('section.title')}</h1><p>{$_('section.description')}</p>
 ```
 
 ### 2. Always update both locale files
 
 When adding or modifying text, you MUST update both:
+
 - `src/lib/i18n/en.json`
 - `src/lib/i18n/es.json`
 
 ### 3. Locale file structure
 
 Follow the existing structure in the locale files:
+
 ```json
 {
 	"section": {
@@ -73,6 +76,7 @@ When editing text:
 ### 6. Example: Adding new text
 
 **Step 1:** Add to `en.json`:
+
 ```json
 {
 	"newSection": {
@@ -83,6 +87,7 @@ When editing text:
 ```
 
 **Step 2:** Add to `es.json`:
+
 ```json
 {
 	"newSection": {
@@ -93,6 +98,7 @@ When editing text:
 ```
 
 **Step 3:** Use in component:
+
 ```svelte
 <script lang="ts">
 	import { _ } from 'svelte-i18n';
