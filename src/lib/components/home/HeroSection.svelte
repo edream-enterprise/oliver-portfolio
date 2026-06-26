@@ -384,7 +384,7 @@
 	<div class="flex flex-col gap-6">
 		<div class="font-code-block text-secondary opacity-80">{$_('hero.command')}</div>
 		<h1
-			class="text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] tracking-tight font-bold font-['JetBrains_Mono'] text-primary uppercase"
+			class="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] tracking-tight font-bold font-['JetBrains_Mono'] text-primary uppercase break-words"
 		>
 			{$_('hero.title')}
 		</h1>

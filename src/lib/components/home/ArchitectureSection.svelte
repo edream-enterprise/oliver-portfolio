@@ -6,7 +6,7 @@
 <section class="py-16 border-b border-outline-variant" id="architecture">
 	<div class="mb-8 flex items-center gap-2">
 		<span class="material-symbols-outlined text-primary" aria-hidden="true">account_tree</span>
-		<h2 class="font-headline-md text-primary">{$_('architecture.title')}</h2>
+		<h2 class="font-headline-md text-lg sm:text-2xl text-primary break-all">{$_('architecture.title')}</h2>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 		<!-- Arch Card 1 -->

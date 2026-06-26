@@ -7,14 +7,14 @@
 <section class="py-16 border-b border-outline-variant" id="blog">
 	<div class="mb-8 flex items-center gap-2">
 		<span class="material-symbols-outlined text-primary" aria-hidden="true">terminal</span>
-		<h2 class="font-headline-md text-primary">{$_('blog.title')}</h2>
+		<h2 class="font-headline-md text-lg sm:text-2xl text-primary break-all">{$_('blog.title')}</h2>
 	</div>
 	<div class="flex flex-col gap-4">
 		<!-- Blog Post 1 -->
 		<PaneCard variant="primary" class="group cursor-pointer">
 			<div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-2">
 				<h3
-					class="font-headline-md text-on-surface group-hover:text-primary transition-colors uppercase"
+					class="font-headline-md text-on-surface group-hover:text-primary transition-colors uppercase break-words"
 				>
 					{$_('blog.post1.title')}
 				</h3>
@@ -28,7 +28,7 @@
 		<PaneCard variant="primary" class="group cursor-pointer">
 			<div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-2">
 				<h3
-					class="font-headline-md text-on-surface group-hover:text-primary transition-colors uppercase"
+					class="font-headline-md text-on-surface group-hover:text-primary transition-colors uppercase break-words"
 				>
 					{$_('blog.post2.title')}
 				</h3>
