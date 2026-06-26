@@ -1,7 +1,7 @@
 ---
-title: "Dokploy + Podman on Alma Linux"
-date: "2024-09-12"
-excerpt: "Moving away from Docker daemon dependencies. How I configured Dokploy to seamlessly manage rootless Podman containers on a fresh Alma Linux instance for secure, self-hosted deployments."
+title: 'Dokploy + Podman on Alma Linux'
+date: '2024-09-12'
+excerpt: 'Moving away from Docker daemon dependencies. How I configured Dokploy to seamlessly manage rootless Podman containers on a fresh Alma Linux instance for secure, self-hosted deployments.'
 ---
 
 # Dokploy + Podman on Alma Linux

@@ -21,12 +21,17 @@
 	<div
 		class="fixed top-10 right-4 w-48 bg-surface border border-outline-variant shadow-xl z-[100] flex flex-col font-code-block text-sm"
 	>
-		<div class="px-3 py-2 border-b border-outline-variant text-on-surface-variant text-xs font-bold bg-surface-variant">
+		<div
+			class="px-3 py-2 border-b border-outline-variant text-on-surface-variant text-xs font-bold bg-surface-variant"
+		>
 			Select Theme
 		</div>
 		{#each themes as theme}
 			<button
-				class="w-full text-left px-4 py-2 hover:bg-primary-container hover:text-white transition-colors duration-150 flex items-center justify-between {globalState.theme === theme.id ? 'text-primary font-bold' : 'text-on-surface'}"
+				class="w-full text-left px-4 py-2 hover:bg-primary-container hover:text-white transition-colors duration-150 flex items-center justify-between {globalState.theme ===
+				theme.id
+					? 'text-primary font-bold'
+					: 'text-on-surface'}"
 				onclick={() => handleThemeSelect(theme.id)}
 			>
 				{theme.name}
