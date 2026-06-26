@@ -2,6 +2,7 @@
 name: sveltekit
 description: Guidelines and best practices for developing with SvelteKit.
 ---
+
 # SvelteKit Best Practices
 
 - Use Svelte 5 syntax and Runes (`$state`, `$derived`, `$effect`, `$props`) where appropriate.

@@ -1,12 +1,18 @@
 <script lang="ts">
 </script>
 
-<section class="py-16 border-b border-outline-variant" id="stack">
+<section
+	class="py-16 border-b border-outline-variant"
+	id="stack"
+>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 		<!-- Terminal 1 -->
 		<div class="flex flex-col">
 			<div class="mb-4 flex items-center gap-2">
-				<span class="material-symbols-outlined text-primary" aria-hidden="true">code</span>
+				<span
+					class="material-symbols-outlined text-primary"
+					aria-hidden="true">code</span
+				>
 				<h2 class="font-headline-md text-primary">~/.config/stack/development.json</h2>
 			</div>
 			<div class="bg-surface-dim pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">
@@ -30,10 +36,9 @@
     <span class="text-secondary">"Vue"</span><span class="text-on-surface-variant">,</span> <span
 						class="text-secondary">"Svelte"</span
 					><span class="text-on-surface-variant">,</span> <span class="text-secondary">"React"</span
-					><span class="text-on-surface-variant">,</span> <span class="text-secondary">"Nuxt"</span><span class="text-on-surface-variant">,</span>
-     <span
-						class="text-secondary">"SvelteKit"</span
-					>
+					><span class="text-on-surface-variant">,</span> <span class="text-secondary">"Nuxt"</span
+					><span class="text-on-surface-variant">,</span>
+     <span class="text-secondary">"SvelteKit"</span>
   <span class="text-on-surface-variant">],</span>
   <span class="text-primary">"backend_frameworks"</span><span class="text-on-surface-variant"
 						>:</span
@@ -64,7 +69,10 @@
 		<!-- Terminal 2 -->
 		<div class="flex flex-col">
 			<div class="mb-4 flex items-center gap-2">
-				<span class="material-symbols-outlined text-primary" aria-hidden="true">dns</span>
+				<span
+					class="material-symbols-outlined text-primary"
+					aria-hidden="true">dns</span
+				>
 				<h2 class="font-headline-md text-primary">~/.config/stack/infrastructure.json</h2>
 			</div>
 			<div class="bg-surface-dim pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">
