@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { _ } from 'svelte-i18n';
 </script>
 
 <section
@@ -10,18 +11,18 @@
 			class="material-symbols-outlined text-primary"
 			aria-hidden="true">mail</span
 		>
-		<h2 class="font-headline-md text-primary">/usr/bin/contact</h2>
+		<h2 class="font-headline-md text-primary">{$_('contact.title')}</h2>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
 		<div class="bg-surface pane-border p-6 rounded-none flex flex-col">
 			<div class="font-code-block text-secondary mb-6 opacity-80">
-				$ echo "Let's build something." &gt; contact.txt
+				{$_('contact.echo')}
 			</div>
 			<form class="flex flex-col gap-4 font-code-block">
 				<div class="flex flex-col gap-2">
 					<label
 						class="text-primary"
-						for="nombre">$NOMBRE</label
+						for="nombre">{$_('contact.form.name')}</label
 					>
 					<input
 						class="bg-background pane-border text-on-surface p-2 outline-none focus:border-primary transition-colors"
@@ -32,7 +33,7 @@
 				<div class="flex flex-col gap-2">
 					<label
 						class="text-primary"
-						for="email">$EMAIL</label
+						for="email">{$_('contact.form.email')}</label
 					>
 					<input
 						class="bg-background pane-border text-on-surface p-2 outline-none focus:border-primary transition-colors"
@@ -43,7 +44,7 @@
 				<div class="flex flex-col gap-2">
 					<label
 						class="text-primary"
-						for="mensaje">Mensaje: STDIN</label
+						for="mensaje">{$_('contact.form.message')}</label
 					>
 					<textarea
 						class="bg-background pane-border text-on-surface p-2 outline-none focus:border-primary transition-colors h-32 resize-none"
@@ -53,50 +54,49 @@
 					class="btn-primary font-label-sm px-6 py-3 uppercase rounded-none mt-2 self-start"
 					type="button"
 				>
-					[ ./send_message.sh ]
+					{$_('contact.form.submit')}
 				</button>
 			</form>
 		</div>
 		<div class="bg-surface pane-border p-6 rounded-none flex flex-col gap-4 font-code-block">
-			<h3 class="text-primary font-bold">[ NETWORK INTERFACES &amp; SYS_INFO ]</h3>
+			<h3 class="text-primary font-bold">{$_('contact.network.title')}</h3>
 			<div class="text-on-surface-variant text-sm">
-				<p><span class="text-secondary">&gt;</span> ping -c 1 oliver.dev</p>
+				<p><span class="text-secondary">&gt;</span> {$_('contact.network.ping')}</p>
 				<p>64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.01ms</p>
 			</div>
 			<div class="border-t border-outline-variant my-2"></div>
 			<div class="flex flex-col gap-2 text-sm">
 				<div class="flex justify-between">
-					<span class="text-primary">github</span>
+					<span class="text-primary">{$_('contact.network.github')}</span>
 					<a
 						class="text-secondary hover:underline"
-						href="https://github.com/10Oliver">-&gt; curl -s api.github.com/users/10Oliver</a
+						href="https://github.com/10Oliver">{$_('contact.network.githubUrl')}</a
 					>
 				</div>
 				<div class="flex justify-between">
-					<span class="text-primary">linkedin</span>
+					<span class="text-primary">{$_('contact.network.linkedin')}</span>
 					<a
 						class="text-secondary hover:underline"
 						href="https://linkedin.com/in/oliver-erazo"
-						>-&gt; xdg-open linkedin.com/in/oliver-erazo</a
+						>{$_('contact.network.linkedinUrl')}</a
 					>
 				</div>
 				<div class="flex justify-between">
-					<span class="text-primary">cv</span>
+					<span class="text-primary">{$_('contact.network.cv')}</span>
 					<a
 						href="/about"
 						class="text-secondary hover:underline"
 					>
-						-&gt; cat ~/docs/cv_oliver.md
+						{$_('contact.network.cvUrl')}
 					</a>
 				</div>
 			</div>
 			<div class="border-t border-outline-variant my-2"></div>
 			<div class="text-sm space-y-1">
-				<p><span class="text-primary">Location:</span> El Salvador (CST / UTC-6)</p>
-				<p><span class="text-primary">Uptime:</span> 99.9%</p>
+				<p><span class="text-primary">{$_('contact.info.location')}</span> {$_('contact.info.locationValue')}</p>
+				<p><span class="text-primary">{$_('contact.info.uptime')}</span> {$_('contact.info.uptimeValue')}</p>
 				<p>
-					<span class="text-primary">Status:</span> <span class="text-secondary">200 OK</span> [Accepting
-					New Projects]
+					<span class="text-primary">{$_('contact.info.status')}</span> <span class="text-secondary">{$_('contact.info.statusValue')}</span> {$_('contact.info.statusAccepting')}
 				</p>
 			</div>
 			<div class="mt-auto pt-4 opacity-30 text-[10px] break-all leading-tight">

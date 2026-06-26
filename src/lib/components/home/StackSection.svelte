@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { _ } from 'svelte-i18n';
 </script>
 
 <section
@@ -13,7 +14,7 @@
 					class="material-symbols-outlined text-primary"
 					aria-hidden="true">code</span
 				>
-				<h2 class="font-headline-md text-primary">~/.config/stack/development.json</h2>
+				<h2 class="font-headline-md text-primary">{$_('stack.development.title')}</h2>
 			</div>
 			<div class="bg-surface-dim pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">
 				<pre class="font-code-block text-on-surface-variant"><span class="text-on-surface-variant"
@@ -73,7 +74,7 @@
 					class="material-symbols-outlined text-primary"
 					aria-hidden="true">dns</span
 				>
-				<h2 class="font-headline-md text-primary">~/.config/stack/infrastructure.json</h2>
+				<h2 class="font-headline-md text-primary">{$_('stack.infrastructure.title')}</h2>
 			</div>
 			<div class="bg-surface-dim pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">
 				<pre class="font-code-block text-on-surface-variant"><span class="text-on-surface-variant"
