@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { globalState, toggleHelpModal } from '$lib/state.svelte';
+	import { _ } from 'svelte-i18n';
 </script>
 
 {#if globalState.helpModalOpen}
@@ -16,13 +17,13 @@
 			<button
 				class="absolute top-2 right-2 text-on-surface-variant hover:text-error"
 				onclick={toggleHelpModal}
-				aria-label="Close help"
+				aria-label={$_('help.close')}
 			>
 				<span class="material-symbols-outlined">close</span>
 			</button>
 
 			<h2 class="text-primary font-bold text-lg mb-4 border-b border-outline-variant pb-2">
-				Neovim Command Palette
+				{$_('help.title')}
 			</h2>
 
 			<div
@@ -31,35 +32,34 @@
 				<div
 					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
 				>
-					:e [route]
+					{$_('help.commands.e.command')}
 				</div>
 				<div class="text-on-surface-variant">
-					Navega a diferentes secciones del portafolio. Ejemplo: <code>:e projects</code>,
-					<code>:e blog</code>.
+					{$_('help.commands.e.description')}
 				</div>
 
 				<div
 					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
 				>
-					:colorscheme [theme]
+					{$_('help.commands.colorscheme.command')}
 				</div>
 				<div class="text-on-surface-variant">
-					Cambia la paleta de colores global. Ejemplo: <code>:colorscheme dracula</code>.
+					{$_('help.commands.colorscheme.description')}
 				</div>
 
 				<div
 					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
 				>
-					:q
+					{$_('help.commands.q.command')}
 				</div>
-				<div class="text-on-surface-variant">Cierra la consola de comandos interactiva.</div>
+				<div class="text-on-surface-variant">{$_('help.commands.q.description')}</div>
 
 				<div
 					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
 				>
-					:help
+					{$_('help.commands.help.command')}
 				</div>
-				<div class="text-on-surface-variant">Muestra este menú de ayuda en pantalla.</div>
+				<div class="text-on-surface-variant">{$_('help.commands.help.description')}</div>
 			</div>
 		</div>
 	</div>

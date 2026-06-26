@@ -6,6 +6,7 @@
 		toggleThemeDropdown
 	} from '$lib/state.svelte';
 	import { resolve } from '$app/paths';
+	import { _ } from 'svelte-i18n';
 
 	function openNeovim() {
 		if (typeof window !== 'undefined') {
@@ -28,27 +29,27 @@
 	<nav class="hidden md:flex items-center h-full gap-4">
 		<a
 			class="font-label-sm text-on-surface-variant hover:bg-primary-container hover:text-white transition-all duration-200 hover:brightness-110 px-3 py-1"
-			href="/#projects">{globalState.language === 'es' ? 'Proyectos' : 'Projects'}</a
+			href="/#projects">{$_('nav.projects')}</a
 		>
 		<a
 			class="font-label-sm text-on-surface-variant hover:bg-primary-container hover:text-white transition-all duration-200 hover:brightness-110 px-3 py-1"
-			href="/#architecture">{globalState.language === 'es' ? 'Arquitectura' : 'Architecture'}</a
+			href="/#architecture">{$_('nav.architecture')}</a
 		>
 		<a
 			class="font-label-sm text-on-surface-variant hover:bg-secondary-container hover:text-white transition-all duration-200 hover:brightness-110 px-3 py-1"
-			href="/about">{globalState.language === 'es' ? 'Perfil' : 'Profile'}</a
+			href="/about">{$_('nav.profile')}</a
 		>
 		<a
 			class="font-label-sm text-on-surface-variant hover:bg-primary-container hover:text-white transition-all duration-200 hover:brightness-110 px-3 py-1"
-			href="/#experience">{globalState.language === 'es' ? 'Experiencia' : 'Experience'}</a
+			href="/#experience">{$_('nav.experience')}</a
 		>
 		<a
 			class="font-label-sm text-on-surface-variant hover:bg-primary-container hover:text-white transition-all duration-200 hover:brightness-110 px-3 py-1"
-			href="/#stack">Stack</a
+			href="/#stack">{$_('nav.stack')}</a
 		>
 		<a
 			class="font-label-sm text-on-surface-variant hover:bg-secondary-container hover:text-white transition-all duration-200 hover:brightness-110 px-3 py-1"
-			href="/blog">{globalState.language === 'es' ? 'Jardín' : 'Garden'}</a
+			href="/blog">{$_('nav.garden')}</a
 		>
 	</nav>
 	<div class="flex items-center h-full gap-2 text-primary">
@@ -58,7 +59,7 @@
 			class="material-symbols-outlined text-[16px] waybar-module cursor-pointer hover:opacity-80"
 			aria-hidden="true"
 			onclick={toggleSystemMonitor}
-			title="System Monitor">memory</span
+			title={$_('header.systemMonitor')}>memory</span
 		>
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -66,7 +67,7 @@
 			class="material-symbols-outlined text-[16px] waybar-module cursor-pointer hover:opacity-80"
 			aria-hidden="true"
 			onclick={openNeovim}
-			title="Open Terminal">terminal</span
+			title={$_('header.openTerminal')}>terminal</span
 		>
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -74,7 +75,7 @@
 			class="material-symbols-outlined text-[16px] waybar-module cursor-pointer hover:opacity-80"
 			aria-hidden="true"
 			onclick={toggleLanguage}
-			title="Toggle Language">translate</span
+			title={$_('header.toggleLanguage')}>translate</span
 		>
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -82,7 +83,7 @@
 			class="material-symbols-outlined text-[16px] waybar-module cursor-pointer hover:opacity-80"
 			aria-hidden="true"
 			onclick={toggleThemeDropdown}
-			title="Select Theme">palette</span
+			title={$_('header.selectTheme')}>palette</span
 		>
 	</div>
 </header>
