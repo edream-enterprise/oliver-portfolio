@@ -21,44 +21,19 @@
 				<span class="material-symbols-outlined">close</span>
 			</button>
 
-			<h2 class="text-primary font-bold text-lg mb-4 border-b border-outline-variant pb-2">
-				Neovim Command Palette
-			</h2>
+			<h2 class="text-primary font-bold text-lg mb-4 border-b border-outline-variant pb-2">Neovim Command Palette</h2>
+			
+			<div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-x-4 gap-y-4 text-sm text-on-surface">
+				<div class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0">:e [route]</div>
+				<div class="text-on-surface-variant">Navega a diferentes secciones del portafolio. Ejemplo: <code>:e projects</code>, <code>:e blog</code>.</div>
+				
+				<div class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0">:colorscheme [theme]</div>
+				<div class="text-on-surface-variant">Cambia la paleta de colores global. Ejemplo: <code>:colorscheme dracula</code>.</div>
 
-			<div
-				class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-x-4 gap-y-4 text-sm text-on-surface"
-			>
-				<div
-					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
-				>
-					:e [route]
-				</div>
-				<div class="text-on-surface-variant">
-					Navega a diferentes secciones del portafolio. Ejemplo: <code>:e projects</code>,
-					<code>:e blog</code>.
-				</div>
-
-				<div
-					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
-				>
-					:colorscheme [theme]
-				</div>
-				<div class="text-on-surface-variant">
-					Cambia la paleta de colores global. Ejemplo: <code>:colorscheme dracula</code>.
-				</div>
-
-				<div
-					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
-				>
-					:q
-				</div>
+				<div class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0">:q</div>
 				<div class="text-on-surface-variant">Cierra la consola de comandos interactiva.</div>
 
-				<div
-					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
-				>
-					:help
-				</div>
+				<div class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0">:help</div>
 				<div class="text-on-surface-variant">Muestra este menú de ayuda en pantalla.</div>
 			</div>
 		</div>
