@@ -2,18 +2,12 @@
 	import { _ } from 'svelte-i18n';
 </script>
 
-<section
-	class="py-16 border-b border-outline-variant"
-	id="stack"
->
+<section class="py-16 border-b border-outline-variant" id="stack">
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 		<!-- Terminal 1 -->
-		<div class="flex flex-col">
+		<div class="flex flex-col min-w-0">
 			<div class="mb-4 flex items-center gap-2">
-				<span
-					class="material-symbols-outlined text-primary"
-					aria-hidden="true">code</span
-				>
+				<span class="material-symbols-outlined text-primary" aria-hidden="true">code</span>
 				<h2 class="font-headline-md text-primary">{$_('stack.development.title')}</h2>
 			</div>
 			<div class="bg-surface-dim pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">
@@ -68,12 +62,9 @@
 			</div>
 		</div>
 		<!-- Terminal 2 -->
-		<div class="flex flex-col">
+		<div class="flex flex-col min-w-0">
 			<div class="mb-4 flex items-center gap-2">
-				<span
-					class="material-symbols-outlined text-primary"
-					aria-hidden="true">dns</span
-				>
+				<span class="material-symbols-outlined text-primary" aria-hidden="true">dns</span>
 				<h2 class="font-headline-md text-primary">{$_('stack.infrastructure.title')}</h2>
 			</div>
 			<div class="bg-surface-dim pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { _ } from 'svelte-i18n';
+	import { resolve } from '$app/paths';
 
 	let { data } = $props();
 </script>
@@ -16,8 +17,8 @@
 	</div>
 
 	<div class="flex flex-col gap-4">
-		{#each data.posts as post}
-			<a href="/blog/{post.slug}" class="block group">
+		{#each data.posts as post (post.slug)}
+			<a href={resolve(`/blog/${post.slug}`)} class="block group">
 				<article
 					class="p-6 bg-surface pane-border pane-glow-primary group-hover:-translate-y-1 transform transition-all rounded-none"
 				>

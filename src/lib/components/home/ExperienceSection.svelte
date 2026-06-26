@@ -1,19 +1,14 @@
 <script lang="ts">
 	import { _ } from 'svelte-i18n';
+	import PaneCard from '$lib/components/ui/PaneCard.svelte';
 </script>
 
-<section
-	class="py-16 border-b border-outline-variant"
-	id="experience"
->
+<section class="py-16 border-b border-outline-variant" id="experience">
 	<div class="mb-8 flex items-center gap-2">
-		<span
-			class="material-symbols-outlined text-primary"
-			aria-hidden="true">work_history</span
-		>
+		<span class="material-symbols-outlined text-primary" aria-hidden="true">work_history</span>
 		<h2 class="font-headline-md text-primary">{$_('experience.title')}</h2>
 	</div>
-	<div class="bg-surface pane-border p-6">
+	<PaneCard variant="none">
 		<div class="border-l border-outline-variant ml-3 space-y-8">
 			<div
 				class="relative pl-6 before:absolute before:-left-[5px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-none"
@@ -38,5 +33,5 @@
 				</p>
 			</div>
 		</div>
-	</div>
+	</PaneCard>
 </section>

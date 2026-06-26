@@ -9,7 +9,7 @@ export const load: PageLoad = async ({ params }) => {
 			content: post.default,
 			meta: post.metadata
 		};
-	} catch (e) {
+	} catch {
 		error(404, `Could not find ${params.slug}`);
 	}
 };

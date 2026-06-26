@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
 	import { _ } from 'svelte-i18n';
+	import ButtonPrimary from '$lib/components/ui/ButtonPrimary.svelte';
+	import ButtonSecondary from '$lib/components/ui/ButtonSecondary.svelte';
 
 	const asciiArts = [
 		`
@@ -322,19 +324,13 @@
 		<p class="font-body-lg text-on-surface-variant uppercase tracking-wide">
 			{$_('hero.subtitle')}
 		</p>
-		<div class="flex gap-4 mt-4">
-			<button
-				class="btn-primary font-label-sm px-6 py-3 uppercase rounded-none"
-				onclick={() => scrollToSection('stack')}
-			>
+		<div class="flex flex-col sm:flex-row gap-4 mt-4 w-full">
+			<ButtonPrimary onclick={() => scrollToSection('stack')} class="w-full sm:w-auto">
 				{$_('hero.btnStack')}
-			</button>
-			<button
-				class="btn-secondary font-label-sm px-6 py-3 uppercase rounded-none"
-				onclick={() => scrollToSection('contact')}
-			>
+			</ButtonPrimary>
+			<ButtonSecondary onclick={() => scrollToSection('contact')} class="w-full sm:w-auto">
 				{$_('hero.btnContact')}
-			</button>
+			</ButtonSecondary>
 		</div>
 	</div>
 	<div class="flex justify-center md:justify-end md:pr-12 lg:pr-24 min-h-[300px]">

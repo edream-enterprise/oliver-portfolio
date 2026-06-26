@@ -17,23 +17,26 @@
 			<span class="material-symbols-outlined text-primary" aria-hidden="true">terminal</span>
 			<h1 class="font-headline-lg text-primary">{$_('about.title')}</h1>
 		</div>
-		<PaneCard class="overflow-x-auto text-sm md:text-base">
-			<div class="font-code-block flex items-center gap-2 mb-6">
+		<PaneCard class="text-sm md:text-base min-w-0">
+			<div class="font-code-block mb-6 leading-relaxed">
 				<span class="text-primary font-bold">oliver@almalinux:~$</span>
 				<span class="text-on-surface-variant">{$_('about.command')}</span>
 			</div>
-			<div class="font-code-block space-y-6 text-on-surface-variant whitespace-pre-wrap">
+			<div class="font-code-block space-y-6 text-on-surface-variant">
 				<div>
-					<span class="text-primary font-bold">{$_('about.userInfo')}</span>
-{$_('about.userName')}
-{$_('about.userRole')}
-{$_('about.userStatus')}
-					<span class="text-secondary font-bold">{$_('about.userStatusValue')}</span><span>{$_('about.userStatusDesc')}</span>
+					<span class="text-primary font-bold block mb-2">{$_('about.userInfo')}</span>
+					<p>{$_('about.userName')}</p>
+					<p>{$_('about.userRole')}</p>
+					<p>
+						{$_('about.userStatus')}
+						<span class="text-secondary font-bold">{$_('about.userStatusValue')}</span>
+						<span>{$_('about.userStatusDesc')}</span>
+					</p>
 				</div>
 
 				<div>
-					<span class="text-primary font-bold">{$_('about.aboutTitle')}</span>
-					{$_('about.aboutText')}
+					<span class="text-primary font-bold block mb-2">{$_('about.aboutTitle')}</span>
+					<p class="whitespace-pre-line leading-relaxed">{$_('about.aboutText')}</p>
 				</div>
 			</div>
 		</PaneCard>
@@ -46,7 +49,7 @@
 		</div>
 		<PaneCard>
 			<div class="border-l border-outline-variant ml-3 space-y-8 py-2">
-				{#each years as year}
+				{#each years as year (year)}
 					<div
 						class="relative pl-6 before:absolute before:-left-[5px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-primary before:rounded-none"
 					>
@@ -68,8 +71,9 @@
 		<div class="mb-4 flex items-center gap-2">
 			<h2 class="font-headline-md text-primary">⚙️ {$_('about.configTitle')}</h2>
 		</div>
-		<PaneCard class="overflow-x-auto text-sm md:text-base">
-			<pre class="font-code-block leading-relaxed"><code class="text-on-surface-variant"
+		<PaneCard class="text-sm md:text-base min-w-0">
+			<pre class="font-code-block leading-relaxed overflow-x-auto w-full"><code
+					class="text-on-surface-variant"
 					><span class="text-secondary opacity-80"
 						># ---------------------------------------------------------
 {$_('about.configComment1')}
