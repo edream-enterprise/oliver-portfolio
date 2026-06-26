@@ -13,25 +13,18 @@
 
 	$effect(() => {
 		if (typeof document !== 'undefined') {
-			document.documentElement.className =
-				globalState.theme === 'default' ? '' : `theme-${globalState.theme}`;
-
+			document.documentElement.className = globalState.theme === 'default' ? '' : `theme-${globalState.theme}`;
+			
 			// Matrix Easter Egg Hint
 			if (globalState.theme === 'default') {
-				console.log(
-					'%cWake up, Oliver... The Matrix has you. Try the terminal: :colorscheme matrix',
-					'color: #00ff00; font-weight: bold; font-family: monospace;'
-				);
+				console.log('%cWake up, Oliver... The Matrix has you. Try the terminal: :colorscheme matrix', 'color: #00ff00; font-weight: bold; font-family: monospace;');
 			}
 		}
 	});
 </script>
 
 <svelte:head>
-	<link
-		rel="icon"
-		href={favicon}
-	/>
+	<link rel="icon" href={favicon} />
 	<title>Oliver Erazo - Portfolio</title>
 </svelte:head>
 
