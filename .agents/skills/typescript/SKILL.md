@@ -2,6 +2,7 @@
 name: typescript
 description: Guidelines for writing robust and type-safe TypeScript code.
 ---
+
 # TypeScript Best Practices
 
 - Always enforce strict type checking (ensure `"strict": true` in `tsconfig.json`).

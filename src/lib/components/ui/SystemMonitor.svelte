@@ -68,7 +68,7 @@
 				<div>
 					<span class="text-secondary font-bold">Themes:</span> 3 loaded ... 1 encrypted
 				</div>
-				
+
 				<div class="flex gap-1 mt-3">
 					<div class="w-4 h-4 bg-background"></div>
 					<div class="w-4 h-4 bg-surface"></div>
