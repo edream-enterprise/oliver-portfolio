@@ -1,52 +1,45 @@
 <script lang="ts">
+	import { _ } from 'svelte-i18n';
+	import PaneCard from '$lib/components/ui/PaneCard.svelte';
+	import ButtonPrimary from '$lib/components/ui/ButtonPrimary.svelte';
 </script>
 
-<section
-	class="py-16 border-b border-outline-variant"
-	id="blog"
->
+<section class="py-16 border-b border-outline-variant" id="blog">
 	<div class="mb-8 flex items-center gap-2">
-		<span
-			class="material-symbols-outlined text-primary"
-			aria-hidden="true">terminal</span
-		>
-		<h2 class="font-headline-md text-primary">/var/log/latest_notes</h2>
+		<span class="material-symbols-outlined text-primary" aria-hidden="true">terminal</span>
+		<h2 class="font-headline-md text-primary">{$_('blog.title')}</h2>
 	</div>
 	<div class="flex flex-col gap-4">
 		<!-- Blog Post 1 -->
-		<article class="p-6 bg-surface pane-border pane-glow-primary group cursor-pointer rounded-none">
+		<PaneCard variant="primary" class="group cursor-pointer">
 			<div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-2">
 				<h3
 					class="font-headline-md text-on-surface group-hover:text-primary transition-colors uppercase"
 				>
-					Optimizing Neovim for Vue/Svelte
+					{$_('blog.post1.title')}
 				</h3>
-				<time class="font-code-block text-on-surface-variant text-sm">2024-10-24</time>
+				<time class="font-code-block text-on-surface-variant text-sm">{$_('blog.post1.date')}</time>
 			</div>
 			<p class="font-body-md text-on-surface-variant">
-				A deep dive into setting up LSP, Treesitter, and formatting tools to create a blazing fast
-				development environment for modern frontend frameworks without the bloat of an IDE.
+				{$_('blog.post1.description')}
 			</p>
-		</article>
+		</PaneCard>
 		<!-- Blog Post 2 -->
-		<article class="p-6 bg-surface pane-border pane-glow-primary group cursor-pointer rounded-none">
+		<PaneCard variant="primary" class="group cursor-pointer">
 			<div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-2">
 				<h3
 					class="font-headline-md text-on-surface group-hover:text-primary transition-colors uppercase"
 				>
-					Dokploy + Podman on Alma Linux
+					{$_('blog.post2.title')}
 				</h3>
-				<time class="font-code-block text-on-surface-variant text-sm">2024-09-12</time>
+				<time class="font-code-block text-on-surface-variant text-sm">{$_('blog.post2.date')}</time>
 			</div>
 			<p class="font-body-md text-on-surface-variant">
-				Moving away from Docker daemon dependencies. How I configured Dokploy to seamlessly manage
-				rootless Podman containers on a fresh Alma Linux instance for secure, self-hosted
-				deployments.
+				{$_('blog.post2.description')}
 			</p>
-		</article>
-		<a
-			class="btn-primary font-label-sm px-6 py-3 mt-6 uppercase inline-block w-max hover:-translate-y-1 transform transition-all"
-			href="/blog">[ ls -l /var/log/todas_las_notas ]</a
-		>
+		</PaneCard>
+		<ButtonPrimary href="/blog" class="mt-6 w-full sm:w-max">
+			{$_('blog.btnAllNotes')}
+		</ButtonPrimary>
 	</div>
 </section>

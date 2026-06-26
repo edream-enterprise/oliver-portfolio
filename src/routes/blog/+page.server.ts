@@ -5,7 +5,8 @@ export const load: PageServerLoad = async () => {
 
 	const posts = Object.entries(modules).map(([path, module]) => {
 		const slug = path.split('/').pop()?.replace('.md', '');
-		const metadata = (module as any).metadata;
+		const metadata = (module as { metadata: { title: string; date: string; excerpt: string } })
+			.metadata;
 		return {
 			slug,
 			...metadata

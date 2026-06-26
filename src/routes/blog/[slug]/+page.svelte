@@ -1,19 +1,18 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
+
 	let { data } = $props();
 	let Content = $derived(data.content);
 </script>
 
 <svelte:head>
 	<title>{data.meta.title} | Oliver's Portfolio</title>
-	<meta
-		name="description"
-		content={data.meta.excerpt}
-	/>
+	<meta name="description" content={data.meta.excerpt} />
 </svelte:head>
 
 <div class="flex flex-col gap-6">
 	<a
-		href="/blog"
+		href={resolve('/blog')}
 		class="text-secondary hover:text-primary transition-colors font-code-block mb-2 inline-flex items-center gap-2 w-max"
 	>
 		<span>&lt;</span> cd ..

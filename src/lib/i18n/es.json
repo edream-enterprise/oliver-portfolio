@@ -1,0 +1,232 @@
+{
+	"nav": {
+		"projects": "Proyectos",
+		"architecture": "Arquitectura",
+		"profile": "Perfil",
+		"experience": "Experiencia",
+		"stack": "Stack",
+		"garden": "Blog"
+	},
+	"header": {
+		"systemMonitor": "Monitor del Sistema",
+		"openTerminal": "Abrir Terminal",
+		"toggleLanguage": "Cambiar Idioma",
+		"selectTheme": "Seleccionar Tema"
+	},
+	"hero": {
+		"command": "oliver@linux:~$ ./quien_soy.sh",
+		"title": "Oliver Alejandro Erazo Reyes",
+		"subtitle": "Construyendo arquitecturas escalables de alto rendimiento en Linux.",
+		"btnStack": "[ cd ./stack ]",
+		"btnContact": "[ ./contacto.sh ]"
+	},
+	"architecture": {
+		"title": "/etc/arquitectura",
+		"frontend": {
+			"title": "[ FRONTEND ]",
+			"description": "Vue.js y experiencia con React y Svelte. Construyendo UIs reactivas y ligeras que se comunican sin problemas con backends complejos."
+		},
+		"backend": {
+			"title": "[ BACKEND ]",
+			"description": "FastAPI y Node.js. Procesamiento de datos de alto rendimiento, diseño de APIs robustas y rendimiento a nivel de sistema."
+		},
+		"devops": {
+			"title": "[ DEVOPS ]",
+			"description": "Alma Linux, Podman/Docker y CI/CD. Gestión de despliegues en infraestructuras tecnológicas de alto impacto."
+		}
+	},
+	"profile": {
+		"title": "/etc/perfil",
+		"description": "Impulsado por la eficiencia y la filosofía del código abierto. Mi stack tecnológico y entorno están constantemente optimizados para el máximo rendimiento. Así es como llegué aquí:",
+		"timeline": {
+			"2022": "2022: Comencé mi viaje como desarrollador. Windows y VSCode eran mi zona de confort.",
+			"2023": "2023: Primeros encuentros con Open Source. La terminal todavía era intimidante.",
+			"2024": "2024: El punto de inflexión. Mint y Pop!_OS se convirtieron en mis drivers diarios.",
+			"2025": "2025: El salto definitivo a Fedora. Adiós VSCode, hola Neovim.",
+			"2026": "2026: Maximizando la eficiencia con Hyprland y Waybar. Dominio total de mi entorno."
+		},
+		"btnBio": "[ cat biografia_completa.md ]"
+	},
+	"experience": {
+		"title": "/var/log/historial_laboral.log",
+		"job1": {
+			"date": "[ 2024 - presente ]",
+			"title": "DESARROLLADOR WEB FULL STACK @ Secretaría de Innovación de la Presidencia",
+			"description": "Diseñé y optimicé soluciones full-stack usando Vue.js y Laravel para mejorar la gestión interna de proyectos y reportes de datos. Agilicé los flujos de trabajo de desarrollo y eliminé las inconsistencias de entorno implementando contenedorización con Docker para despliegues sin problemas."
+		},
+		"job2": {
+			"date": "[ 2022 - 2024 ]",
+			"title": "DESARROLLADOR DE SOFTWARE @ Instituto Técnico Ricaldone",
+			"description": "Desarrollé y mantuve APIs RESTful robustas usando FastAPI y Express, asegurando un 99.9% de tiempo de actividad. Mejoré la experiencia de usuario para más de 1,000 estudiantes refactorizando componentes UI de Vue, mientras administraba de forma segura las plataformas en la nube de Moodle, Google y Microsoft."
+		}
+	},
+	"projects": {
+		"title": "/home/proyectos",
+		"prevProjects": "Proyectos anteriores",
+		"nextProjects": "Proyectos siguientes",
+		"project1": {
+			"title": "CONFIGURACIÓN NEOVIM",
+			"description": "Entorno de desarrollo minimalista y rápido basado en Neovim optimizado para desarrollo web moderno (Vue, TS, JS). Incluye LSP, autocompletado con IA (Copilot), integración avanzada de Git y búsqueda ultra rápida.",
+			"tags": ["Lua", "Markdown"]
+		},
+		"project2": {
+			"title": "PORTAFOLIO SVELTE",
+			"description": "Un portafolio personal interactivo con estilo de terminal y gestor de ventanas, desarrollado con SvelteKit; incluye publicaciones de blog y una biografía en formato Markdown.",
+			"tags": ["Svelte", "Linux"]
+		},
+		"project3": {
+			"title": "APP DE EVENTOS COMUNITARIOS",
+			"description": "Una aplicación móvil colaborativa (proyecto universitario) diseñada para gestionar eventos y seguimiento de asistencia. Desarrollada usando React Native, Expo y Firebase.",
+			"tags": ["React Native", "Firebase"]
+		},
+		"project4": {
+			"title": "APP DE FINANZAS PERSONALES",
+			"description": "Una aplicación web para gestión de finanzas personales, seguimiento de ingresos y gastos. Desarrollada usando Laravel 12 y Blade, con cuentas personalizadas, categorías, gráficos y autenticación 2FA.",
+			"tags": ["Laravel", "Blade"]
+		},
+		"project5": {
+			"title": "PLANTILLA VUE 3",
+			"description": "Una plantilla base para desarrollo rápido de aplicaciones web modernas usando Vue 3 y Vuetify 3. Preconfigurada con Pinia para gestión de estado y Vue Router.",
+			"tags": ["Vue 3", "Vuetify", "Vite"]
+		}
+	},
+	"stack": {
+		"development": {
+			"title": "~/.config/stack/desarrollo.json"
+		},
+		"infrastructure": {
+			"title": "~/.config/stack/infraestructura.json"
+		}
+	},
+	"blog": {
+		"title": "/var/log/notas_recientes",
+		"post1": {
+			"title": "Optimizando Neovim para Vue/Svelte",
+			"date": "2024-10-24",
+			"description": "Una inmersión profunda en la configuración de LSP, Treesitter y herramientas de formateo para crear un entorno de desarrollo ultrarrápido para frameworks frontend modernos sin el exceso de un IDE."
+		},
+		"post2": {
+			"title": "Dokploy + Podman en Alma Linux",
+			"date": "2024-09-12",
+			"description": "Alejándome de las dependencias del daemon de Docker. Cómo configuré Dokploy para gestionar sin problemas contenedores Podman sin root en una instancia fresca de Alma Linux para despliegues autohospedados seguros."
+		},
+		"btnAllNotes": "[ ls -l /var/log/todas_las_notas ]",
+		"pageTitle": "/var/log/todas_las_notas"
+	},
+	"contact": {
+		"title": "/usr/bin/contacto",
+		"echo": "$ echo \"Construyamos algo.\" > contacto.txt",
+		"form": {
+			"name": "$NOMBRE",
+			"email": "$EMAIL",
+			"message": "Mensaje: STDIN",
+			"submit": "[ ./enviar_mensaje.sh ]"
+		},
+		"network": {
+			"title": "[ INTERFACES DE RED & SYS_INFO ]",
+			"ping": "ping -c 1 oliver.dev",
+			"github": "github",
+			"githubUrl": "-> curl -s api.github.com/users/10Oliver",
+			"linkedin": "linkedin",
+			"linkedinUrl": "-> xdg-open linkedin.com/in/oliver-erazo",
+			"cv": "cv",
+			"cvUrl": "-> cat ~/docs/cv_oliver.md"
+		},
+		"info": {
+			"location": "Ubicación:",
+			"locationValue": "El Salvador (CST / UTC-6)",
+			"uptime": "Tiempo activo:",
+			"uptimeValue": "99.9%",
+			"status": "Estado:",
+			"statusValue": "200 OK",
+			"statusAccepting": "[Aceptando Nuevos Proyectos]"
+		}
+	},
+	"about": {
+		"title": "/usr/bin/quien_soy",
+		"command": "whoami --verbose --human",
+		"userInfo": "[ INFO_USUARIO ]",
+		"userName": "Nombre: Oliver Alejandro Erazo Reyes",
+		"userRole": "Rol: Desarrollador Web Full Stack",
+		"userStatus": "Estado:",
+		"userStatusValue": "Ejecutándose",
+		"userStatusDesc": ", impulsado por la curiosidad y la eficiencia de terminal.",
+		"aboutTitle": "[ ACERCA DE ]",
+		"aboutText": "Soy un ingeniero de software apasionado por construir soluciones eficientes, adaptables y escalables. Mi enfoque conecta la brecha entre arquitecturas backend robustas y experiencias de usuario sin problemas.\n\nCuando no estoy configurando servidores, escribiendo código u optimizando mi entorno Neovim, probablemente me encontrarás corriendo—una disciplina física que me da el enfoque y equilibrio necesarios para enfrentar el próximo desafío técnico.",
+		"timelineTitle": "/var/log/evolucion_sistema.log",
+		"timeline": {
+			"2026": {
+				"title": "MAESTRIA_BARE_METAL",
+				"description": "Reemplacé los entornos de escritorio tradicionales con Hyprland y Waybar. Rápido, minimalista y completamente basado en terminal."
+			},
+			"2025": {
+				"title": "ANULACION_PRODUCTIVIDAD",
+				"description": "El cambio definitivo. Me mudé a Fedora. Más importante, dejé VSCode atrás y abracé completamente Neovim para maximizar la productividad."
+			},
+			"2024": {
+				"title": "MIGRACION_EXITOSA",
+				"description": "El punto de inflexión. Probé Linux otra vez con Mint, luego Pop!_OS. La experiencia fue fluida, y finalmente lo convertí en mi driver diario."
+			},
+			"2023": {
+				"title": "KERNEL_PANIC_Y_REVERSIÓN",
+				"description": "El primer salto. Probé Manjaro como mi SO principal. Luché con las dependencias, temía a la terminal, y eventualmente retrocedí a Windows."
+			},
+			"2022": {
+				"title": "INICIO_ENTORNO_DEV",
+				"description": "\"Hola, Mundo.\" Oficialmente comencé mi camino como desarrollador. Windows y VSCode eran mi zona de confort definitiva."
+			},
+			"2021": {
+				"title": "PRUEBA_VIRTUALIZACIÓN",
+				"description": "La semilla de la curiosidad. Virtualicé mi primera instancia de Ubuntu y tuve mi primer vistazo al ecosistema Linux."
+			},
+			"2015": {
+				"title": "INICIO_SISTEMA",
+				"description": "Mi primera PC. Era un usuario estándar de Windows, completamente inconsciente del mundo tecnológico más amplio y la programación."
+			}
+		},
+		"configTitle": "~/.config/mentalidad.conf",
+		"configComment1": "# FILOSOFÍA CENTRAL",
+		"configComment2": "# La simplicidad es la máxima sofisticación. Creo firmemente",
+		"configComment3": "# en la filosofía UNIX: escribe programas que hagan",
+		"configComment4": "# una cosa y la hagan bien.",
+		"configComment5": "# ENFOQUE DE ARQUITECTURA",
+		"configComment6": "# Aspiro a código que no solo sea funcional, sino eficiente,",
+		"configComment7": "# mantenible y construido sobre arquitecturas sólidas. Prospero",
+		"configComment8": "# en la terminal porque elimina las distracciones,",
+		"configComment9": "# permitiéndome enfocarme completamente en resolver problemas.",
+		"pageTitle": "Acerca de | Portafolio de Oliver",
+		"pageDescription": "Biografía completa de Oliver"
+	},
+	"blogPage": {
+		"title": "Blog | Portafolio de Oliver",
+		"description": "Últimos artículos desde la terminal"
+	},
+	"help": {
+		"title": "Paleta de Comandos Neovim",
+		"close": "Cerrar ayuda",
+		"commands": {
+			"e": {
+				"command": ":e [ruta]",
+				"description": "Navega a diferentes secciones del portafolio. Ejemplo: :e proyectos, :e blog."
+			},
+			"colorscheme": {
+				"command": ":colorscheme [tema]",
+				"description": "Cambia la paleta de colores global. Ejemplo: :colorscheme dracula."
+			},
+			"q": {
+				"command": ":q",
+				"description": "Cierra la consola de comandos interactiva."
+			},
+			"help": {
+				"command": ":help",
+				"description": "Muestra este menú de ayuda en pantalla."
+			}
+		}
+	},
+	"footer": {
+		"version": "v1.9.0-stable [GNU/Linux]"
+	},
+	"console": {
+		"matrixHint": "Despierta, Oliver... Matrix te tiene. Prueba la terminal: :colorscheme matrix"
+	}
+}

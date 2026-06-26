@@ -8,6 +8,8 @@
 	import ThemeDropdown from '$lib/components/ui/ThemeDropdown.svelte';
 	import HelpModal from '$lib/components/ui/HelpModal.svelte';
 	import { globalState } from '$lib/state.svelte';
+	import { _ } from 'svelte-i18n';
+	import '$lib/i18n';
 
 	let { children } = $props();
 
@@ -16,10 +18,9 @@
 			document.documentElement.className =
 				globalState.theme === 'default' ? '' : `theme-${globalState.theme}`;
 
-			// Matrix Easter Egg Hint
 			if (globalState.theme === 'default') {
 				console.log(
-					'%cWake up, Oliver... The Matrix has you. Try the terminal: :colorscheme matrix',
+					`%c${$_('console.matrixHint')}`,
 					'color: #00ff00; font-weight: bold; font-family: monospace;'
 				);
 			}
@@ -28,11 +29,8 @@
 </script>
 
 <svelte:head>
-	<link
-		rel="icon"
-		href={favicon}
-	/>
-	<title>Oliver Erazo - Portfolio</title>
+	<link rel="icon" href={favicon} />
+	<title>{$_('about.pageTitle')}</title>
 </svelte:head>
 
 <Header />

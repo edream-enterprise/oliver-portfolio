@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
+	import { _ } from 'svelte-i18n';
+	import ButtonPrimary from '$lib/components/ui/ButtonPrimary.svelte';
+	import ButtonSecondary from '$lib/components/ui/ButtonSecondary.svelte';
 
 	const asciiArts = [
 		`
@@ -312,28 +315,22 @@
 	class="py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-b border-outline-variant"
 >
 	<div class="flex flex-col gap-6">
-		<div class="font-code-block text-secondary opacity-80">oliver@linux:~$ ./whoami.sh</div>
+		<div class="font-code-block text-secondary opacity-80">{$_('hero.command')}</div>
 		<h1
 			class="text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] tracking-tight font-bold font-['JetBrains_Mono'] text-primary uppercase"
 		>
-			Oliver Alejandro Erazo Reyes
+			{$_('hero.title')}
 		</h1>
 		<p class="font-body-lg text-on-surface-variant uppercase tracking-wide">
-			Building high-performance, scalable architectures in Linux.
+			{$_('hero.subtitle')}
 		</p>
-		<div class="flex gap-4 mt-4">
-			<button
-				class="btn-primary font-label-sm px-6 py-3 uppercase rounded-none"
-				onclick={() => scrollToSection('stack')}
-			>
-				[ cd ./stack ]
-			</button>
-			<button
-				class="btn-secondary font-label-sm px-6 py-3 uppercase rounded-none"
-				onclick={() => scrollToSection('contact')}
-			>
-				[ ./contact.sh ]
-			</button>
+		<div class="flex flex-col sm:flex-row gap-4 mt-4 w-full">
+			<ButtonPrimary onclick={() => scrollToSection('stack')} class="w-full sm:w-auto">
+				{$_('hero.btnStack')}
+			</ButtonPrimary>
+			<ButtonSecondary onclick={() => scrollToSection('contact')} class="w-full sm:w-auto">
+				{$_('hero.btnContact')}
+			</ButtonSecondary>
 		</div>
 	</div>
 	<div class="flex justify-center md:justify-end md:pr-12 lg:pr-24 min-h-[300px]">

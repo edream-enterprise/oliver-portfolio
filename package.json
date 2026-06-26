@@ -39,6 +39,7 @@
 		"vite": "^8.0.16"
 	},
 	"dependencies": {
-		"node-fetch": "^3.3.2"
+		"node-fetch": "^3.3.2",
+		"svelte-i18n": "^4.0.1"
 	}
 }
