@@ -1,9 +1,15 @@
 <script lang="ts">
 </script>
 
-<section class="py-16 border-b border-outline-variant" id="experience">
+<section
+	class="py-16 border-b border-outline-variant"
+	id="experience"
+>
 	<div class="mb-8 flex items-center gap-2">
-		<span class="material-symbols-outlined text-primary" aria-hidden="true">work_history</span>
+		<span
+			class="material-symbols-outlined text-primary"
+			aria-hidden="true">work_history</span
+		>
 		<h2 class="font-headline-md text-primary">/var/log/work_history.log</h2>
 	</div>
 	<div class="bg-surface pane-border p-6">
@@ -16,7 +22,10 @@
 					FULL STACK WEB DEVELOPER @ Secretaría de Innovación de la Presidencia
 				</h3>
 				<p class="font-body-md text-on-surface-variant">
-					Engineered and optimized full-stack solutions using Vue.js and Laravel to enhance internal project management and data reporting. Streamlined developer workflows and eliminated environment inconsistencies by implementing Docker containerization for seamless deployments.
+					Engineered and optimized full-stack solutions using Vue.js and Laravel to enhance internal
+					project management and data reporting. Streamlined developer workflows and eliminated
+					environment inconsistencies by implementing Docker containerization for seamless
+					deployments.
 				</p>
 			</div>
 			<div
@@ -24,10 +33,12 @@
 			>
 				<div class="font-code-block text-secondary text-sm mb-1">[ 2022 - 2024 ]</div>
 				<h3 class="text-primary font-headline-md uppercase mb-2">
-          SOFTWARE DEVELOPER @ Instituto Técnico Ricaldone
-        </h3>
+					SOFTWARE DEVELOPER @ Instituto Técnico Ricaldone
+				</h3>
 				<p class="font-body-md text-on-surface-variant">
-					Developed and maintained robust RESTful APIs using FastAPI and Express, ensuring 99.9% uptime. Improved the user experience for over 1,000 students by refactoring Vue UI components, while securely administering Moodle, Google, and Microsoft cloud platforms.
+					Developed and maintained robust RESTful APIs using FastAPI and Express, ensuring 99.9%
+					uptime. Improved the user experience for over 1,000 students by refactoring Vue UI
+					components, while securely administering Moodle, Google, and Microsoft cloud platforms.
 				</p>
 			</div>
 		</div>
