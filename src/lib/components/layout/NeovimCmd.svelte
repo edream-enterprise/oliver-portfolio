@@ -59,10 +59,12 @@
 					if ($page.url.pathname === '/') {
 						document.getElementById(dest)?.scrollIntoView({ behavior: 'smooth' });
 					} else {
-						goto(resolve(`/#${dest}`));
+						// eslint-disable-next-line svelte/no-navigation-without-resolve
+						goto((resolve as (path: string) => string)(`/#${dest}`));
 					}
 				} else if (['about', 'blog'].includes(dest)) {
-					goto(resolve(`/${dest}`));
+					// eslint-disable-next-line svelte/no-navigation-without-resolve
+					goto((resolve as (path: string) => string)(`/${dest}`));
 				}
 				active = false;
 			}

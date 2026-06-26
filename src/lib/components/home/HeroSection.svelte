@@ -293,6 +293,73 @@
 	`
 	];
 
+	interface ParsedArt {
+		path: string;
+		viewBox: string;
+	}
+
+	function parseBrailleArt(art: string): ParsedArt {
+		const lines = art.split('\n');
+		const dots: { x: number; y: number }[] = [];
+
+		while (lines.length > 0 && lines[0].trim() === '') lines.shift();
+		while (lines.length > 0 && lines[lines.length - 1].trim() === '') lines.pop();
+
+		for (let y = 0; y < lines.length; y++) {
+			const line = lines[y];
+			for (let x = 0; x < line.length; x++) {
+				const code = line.charCodeAt(x);
+				if (code >= 0x2800 && code <= 0x28ff) {
+					const mask = code - 0x2800;
+					const offsets = [
+						[0, 0],
+						[0, 1],
+						[0, 2],
+						[1, 0],
+						[1, 1],
+						[1, 2],
+						[0, 3],
+						[1, 3]
+					];
+					for (let bit = 0; bit < 8; bit++) {
+						if ((mask & (1 << bit)) !== 0) {
+							const [dx, dy] = offsets[bit];
+							dots.push({ x: x * 2 + dx, y: y * 4 + dy });
+						}
+					}
+				}
+			}
+		}
+
+		let minX = Infinity,
+			minY = Infinity,
+			maxX = -Infinity,
+			maxY = -Infinity;
+		for (const d of dots) {
+			if (d.x < minX) minX = d.x;
+			if (d.y < minY) minY = d.y;
+			if (d.x > maxX) maxX = d.x;
+			if (d.y > maxY) maxY = d.y;
+		}
+
+		const r = 0.38;
+		const pad = 1;
+		const cw = maxX - minX;
+		const ch = maxY - minY;
+		const side = Math.max(cw, ch);
+		const vbX = minX - (side - cw) / 2 - r - pad;
+		const vbY = minY - (side - ch) / 2 - r - pad;
+		const vbSize = side + 2 * r + 2 * pad;
+
+		const path = dots
+			.map((d) => `M ${d.x - r},${d.y} a ${r},${r} 0 1,1 ${2 * r},0 a ${r},${r} 0 1,1 -${2 * r},0`)
+			.join(' ');
+
+		return { path, viewBox: `${vbX} ${vbY} ${vbSize} ${vbSize}` };
+	}
+
+	const parsedArts = asciiArts.map(parseBrailleArt);
+
 	let artIndex = $state(0);
 	let intervalId: ReturnType<typeof setInterval>;
 
@@ -333,10 +400,12 @@
 			</ButtonSecondary>
 		</div>
 	</div>
-	<div class="flex justify-center md:justify-end md:pr-12 lg:pr-24 min-h-[300px]">
-		<pre
-			class="font-code-block text-primary drop-shadow-[0_0_15px_rgba(255,86,43,0.3)] leading-none text-[8px] sm:text-[10px] md:text-xs lg:text-sm">{asciiArts[
-				artIndex
-			]}</pre>
+	<div class="flex justify-center md:justify-end items-center md:pr-12 lg:pr-24 min-h-[300px]">
+		<svg
+			viewBox={parsedArts[artIndex].viewBox}
+			class="w-[240px] sm:w-[280px] md:w-[320px] lg:w-[360px] h-auto text-primary drop-shadow-[0_0_15px_rgba(255,86,43,0.35)] select-none transition-all duration-300"
+		>
+			<path d={parsedArts[artIndex].path} fill="currentColor" />
+		</svg>
 	</div>
 </section>

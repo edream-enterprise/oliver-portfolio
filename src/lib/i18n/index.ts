@@ -1,8 +1,10 @@
-import { init, register, locale } from 'svelte-i18n';
+import { init, addMessages, locale } from 'svelte-i18n';
 import { browser } from '$app/environment';
+import en from './en.json';
+import es from './es.json';
 
-register('en', () => import('./en.json'));
-register('es', () => import('./es.json'));
+addMessages('en', en);
+addMessages('es', es);
 
 const SUPPORTED_LANGUAGES = ['en', 'es'] as const;
 type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
