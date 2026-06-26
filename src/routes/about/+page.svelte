@@ -28,7 +28,7 @@
 {$_('about.userName')}
 {$_('about.userRole')}
 {$_('about.userStatus')}
-					<span class="text-secondary font-bold">{$_('about.userStatusValue')}</span>
+					<span class="text-secondary font-bold">{$_('about.userStatusValue')}</span><span>{$_('about.userStatusDesc')}</span>
 				</div>
 
 				<div>

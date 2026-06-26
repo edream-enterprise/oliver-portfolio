@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { _ } from 'svelte-i18n';
+	import { _, json } from 'svelte-i18n';
 
 	let scrollContainer: HTMLElement | undefined = $state();
 
@@ -65,7 +65,7 @@
 				{$_('projects.project1.description')}
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
-				{#each $_('projects.project1.tags') as tag}
+				{#each $json('projects.project1.tags') as tag}
 					<span
 						class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
 						>[{tag}]</span
@@ -87,7 +87,7 @@
 				{$_('projects.project2.description')}
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
-				{#each $_('projects.project2.tags') as tag}
+				{#each $json('projects.project2.tags') as tag}
 					<span
 						class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
 						>[{tag}]</span
@@ -111,7 +111,7 @@
 				{$_('projects.project3.description')}
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
-				{#each $_('projects.project3.tags') as tag}
+				{#each $json('projects.project3.tags') as tag}
 					<span
 						class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
 						>[{tag}]</span
@@ -135,7 +135,7 @@
 				{$_('projects.project4.description')}
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
-				{#each $_('projects.project4.tags') as tag}
+				{#each $json('projects.project4.tags') as tag}
 					<span
 						class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
 						>[{tag}]</span
@@ -159,7 +159,7 @@
 				{$_('projects.project5.description')}
 			</p>
 			<div class="flex flex-wrap gap-2 mt-auto">
-				{#each $_('projects.project5.tags') as tag}
+				{#each $json('projects.project5.tags') as tag}
 					<span
 						class="font-label-sm bg-surface-variant px-2 py-1 text-on-surface-variant border border-outline-variant"
 						>[{tag}]</span
