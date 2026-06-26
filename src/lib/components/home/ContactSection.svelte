@@ -1,15 +1,9 @@
 <script lang="ts">
 </script>
 
-<section
-	class="py-16"
-	id="contact"
->
+<section class="py-16" id="contact">
 	<div class="mb-8 flex items-center gap-2">
-		<span
-			class="material-symbols-outlined text-primary"
-			aria-hidden="true">mail</span
-		>
+		<span class="material-symbols-outlined text-primary" aria-hidden="true">mail</span>
 		<h2 class="font-headline-md text-primary">/usr/bin/contact</h2>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
@@ -19,10 +13,7 @@
 			</div>
 			<form class="flex flex-col gap-4 font-code-block">
 				<div class="flex flex-col gap-2">
-					<label
-						class="text-primary"
-						for="nombre">$NOMBRE</label
-					>
+					<label class="text-primary" for="nombre">$NOMBRE</label>
 					<input
 						class="bg-background pane-border text-on-surface p-2 outline-none focus:border-primary transition-colors"
 						id="nombre"
@@ -30,10 +21,7 @@
 					/>
 				</div>
 				<div class="flex flex-col gap-2">
-					<label
-						class="text-primary"
-						for="email">$EMAIL</label
-					>
+					<label class="text-primary" for="email">$EMAIL</label>
 					<input
 						class="bg-background pane-border text-on-surface p-2 outline-none focus:border-primary transition-colors"
 						id="email"
@@ -41,10 +29,7 @@
 					/>
 				</div>
 				<div class="flex flex-col gap-2">
-					<label
-						class="text-primary"
-						for="mensaje">Mensaje: STDIN</label
-					>
+					<label class="text-primary" for="mensaje">Mensaje: STDIN</label>
 					<textarea
 						class="bg-background pane-border text-on-surface p-2 outline-none focus:border-primary transition-colors h-32 resize-none"
 						id="mensaje"></textarea>
@@ -67,28 +52,22 @@
 			<div class="flex flex-col gap-2 text-sm">
 				<div class="flex justify-between">
 					<span class="text-primary">github</span>
-					<a
-						class="text-secondary hover:underline"
-						href="https://github.com/10Oliver">-&gt; curl -s api.github.com/users/10Oliver</a
+					<a class="text-secondary hover:underline" href="https://github.com/10Oliver"
+						>-&gt; curl -s api.github.com/users/10Oliver</a
 					>
 				</div>
 				<div class="flex justify-between">
 					<span class="text-primary">linkedin</span>
-					<a
-						class="text-secondary hover:underline"
-						href="https://linkedin.com/in/oliver-erazo"
+					<a class="text-secondary hover:underline" href="https://linkedin.com/in/oliver-erazo"
 						>-&gt; xdg-open linkedin.com/in/oliver-erazo</a
 					>
 				</div>
-				<div class="flex justify-between">
-					<span class="text-primary">cv</span>
-					<a
-						href="/about"
-						class="text-secondary hover:underline"
-					>
-						-&gt; cat ~/docs/cv_oliver.md
-					</a>
-				</div>
+        <div class="flex justify-between">
+          <span class="text-primary">cv</span>
+          <a href="/about" class="text-secondary hover:underline">
+            -&gt; cat ~/docs/cv_oliver.md
+          </a>
+        </div>
 			</div>
 			<div class="border-t border-outline-variant my-2"></div>
 			<div class="text-sm space-y-1">

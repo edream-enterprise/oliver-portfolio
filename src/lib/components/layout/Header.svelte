@@ -1,11 +1,5 @@
 <script lang="ts">
-	import {
-		globalState,
-		toggleLanguage,
-		toggleSystemMonitor,
-		toggleThemeDropdown
-	} from '$lib/state.svelte';
-	import { resolve } from '$app/paths';
+	import { globalState, toggleLanguage, toggleSystemMonitor, toggleThemeDropdown } from '$lib/state.svelte';
 
 	function openNeovim() {
 		if (typeof window !== 'undefined') {
@@ -18,12 +12,7 @@
 	class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-8 bg-surface border-b border-outline-variant"
 >
 	<div class="flex items-center h-full">
-		<a
-			href={resolve('/')}
-			class="waybar-module font-label-sm text-primary hover:bg-primary-container hover:text-white transition-all duration-200 hover:brightness-110"
-		>
-			oliver@almalinux: ~
-		</a>
+		<div class="waybar-module font-label-sm text-primary">oliver@almalinux: ~</div>
 	</div>
 	<nav class="hidden md:flex items-center h-full gap-4">
 		<a

@@ -1,20 +1,16 @@
 <script lang="ts">
 </script>
 
-<section
-	class="py-16 border-b border-outline-variant"
-	id="blog"
->
+<section class="py-16 border-b border-outline-variant" id="blog">
 	<div class="mb-8 flex items-center gap-2">
-		<span
-			class="material-symbols-outlined text-primary"
-			aria-hidden="true">terminal</span
-		>
+		<span class="material-symbols-outlined text-primary" aria-hidden="true">terminal</span>
 		<h2 class="font-headline-md text-primary">/var/log/latest_notes</h2>
 	</div>
 	<div class="flex flex-col gap-4">
 		<!-- Blog Post 1 -->
-		<article class="p-6 bg-surface pane-border pane-glow-primary group cursor-pointer rounded-none">
+		<article
+			class="p-6 bg-surface pane-border pane-glow-primary group cursor-pointer rounded-none"
+		>
 			<div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-2">
 				<h3
 					class="font-headline-md text-on-surface group-hover:text-primary transition-colors uppercase"
@@ -29,7 +25,9 @@
 			</p>
 		</article>
 		<!-- Blog Post 2 -->
-		<article class="p-6 bg-surface pane-border pane-glow-primary group cursor-pointer rounded-none">
+		<article
+			class="p-6 bg-surface pane-border pane-glow-primary group cursor-pointer rounded-none"
+		>
 			<div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-2">
 				<h3
 					class="font-headline-md text-on-surface group-hover:text-primary transition-colors uppercase"
