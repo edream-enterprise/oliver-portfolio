@@ -1,10 +1,18 @@
 import { locale } from 'svelte-i18n';
 
-const getInitialLanguage = (): string => {
+const SUPPORTED_LANGUAGES = ['en', 'es'] as const;
+type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
+
+const getInitialLanguage = (): SupportedLanguage => {
 	if (typeof window !== 'undefined') {
 		const stored = localStorage.getItem('language');
-		if (stored === 'en' || stored === 'es') {
-			return stored;
+		if (stored && SUPPORTED_LANGUAGES.includes(stored as SupportedLanguage)) {
+			return stored as SupportedLanguage;
+		}
+
+		const browserLang = navigator.language.split('-')[0];
+		if (SUPPORTED_LANGUAGES.includes(browserLang as SupportedLanguage)) {
+			return browserLang as SupportedLanguage;
 		}
 	}
 	return 'en';
