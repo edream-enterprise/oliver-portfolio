@@ -8,25 +8,19 @@
 	import ThemeDropdown from '$lib/components/ui/ThemeDropdown.svelte';
 	import HelpModal from '$lib/components/ui/HelpModal.svelte';
 	import { globalState } from '$lib/state.svelte';
-	import { locale, _ } from 'svelte-i18n';
+	import { _ } from 'svelte-i18n';
 	import '$lib/i18n';
-	import { onMount } from 'svelte';
 
 	let { children } = $props();
-
-	onMount(() => {
-		locale.set(globalState.language);
-	});
 
 	$effect(() => {
 		if (typeof document !== 'undefined') {
 			document.documentElement.className =
 				globalState.theme === 'default' ? '' : `theme-${globalState.theme}`;
 
-			// Matrix Easter Egg Hint
 			if (globalState.theme === 'default') {
 				console.log(
-					`%c{$_('console.matrixHint')}`,
+					`%c${$_('console.matrixHint')}`,
 					'color: #00ff00; font-weight: bold; font-family: monospace;'
 				);
 			}

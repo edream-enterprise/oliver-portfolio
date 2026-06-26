@@ -1,18 +1,15 @@
 import { locale } from 'svelte-i18n';
+import { browser } from '$app/environment';
 
-const SUPPORTED_LANGUAGES = ['en', 'es'] as const;
-type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
-
-const getInitialLanguage = (): SupportedLanguage => {
-	if (typeof window !== 'undefined') {
+const getInitialLanguage = (): 'en' | 'es' => {
+	if (browser) {
 		const stored = localStorage.getItem('language');
-		if (stored && SUPPORTED_LANGUAGES.includes(stored as SupportedLanguage)) {
-			return stored as SupportedLanguage;
+		if (stored === 'en' || stored === 'es') {
+			return stored;
 		}
-
 		const browserLang = navigator.language.split('-')[0];
-		if (SUPPORTED_LANGUAGES.includes(browserLang as SupportedLanguage)) {
-			return browserLang as SupportedLanguage;
+		if (browserLang === 'en' || browserLang === 'es') {
+			return browserLang;
 		}
 	}
 	return 'en';
@@ -34,14 +31,13 @@ export function toggleLanguage() {
 	const newLang = globalState.language === 'en' ? 'es' : 'en';
 	globalState.language = newLang;
 	locale.set(newLang);
-	if (typeof window !== 'undefined') {
+	if (browser) {
 		localStorage.setItem('language', newLang);
 	}
 }
 
 export function toggleSystemMonitor() {
 	globalState.systemMonitorOpen = !globalState.systemMonitorOpen;
-	// Close dropdown if open
 	if (globalState.systemMonitorOpen) {
 		globalState.themeDropdownOpen = false;
 		globalState.helpModalOpen = false;
@@ -50,7 +46,6 @@ export function toggleSystemMonitor() {
 
 export function toggleThemeDropdown() {
 	globalState.themeDropdownOpen = !globalState.themeDropdownOpen;
-	// Close monitor if open
 	if (globalState.themeDropdownOpen) {
 		globalState.systemMonitorOpen = false;
 		globalState.helpModalOpen = false;
