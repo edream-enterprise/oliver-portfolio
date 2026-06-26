@@ -1,0 +1,231 @@
+{
+	"nav": {
+		"projects": "Projects",
+		"architecture": "Architecture",
+		"profile": "Profile",
+		"experience": "Experience",
+		"stack": "Stack",
+		"garden": "Garden"
+	},
+	"header": {
+		"systemMonitor": "System Monitor",
+		"openTerminal": "Open Terminal",
+		"toggleLanguage": "Toggle Language",
+		"selectTheme": "Select Theme"
+	},
+	"hero": {
+		"command": "oliver@linux:~$ ./whoami.sh",
+		"title": "Oliver Alejandro Erazo Reyes",
+		"subtitle": "Building high-performance, scalable architectures in Linux.",
+		"btnStack": "[ cd ./stack ]",
+		"btnContact": "[ ./contact.sh ]"
+	},
+	"architecture": {
+		"title": "/etc/architecture",
+		"frontend": {
+			"title": "[ FRONTEND ]",
+			"description": "Vue.js and experience with React and Svelte. Building reactive, lightweight UIs that communicate seamlessly with complex backends."
+		},
+		"backend": {
+			"title": "[ BACKEND ]",
+			"description": "FastAPI & Node.js. High-throughput data processing, robust API design, and system-level performance."
+		},
+		"devops": {
+			"title": "[ DEVOPS ]",
+			"description": "Alma Linux, Podman/Docker, & CI/CD. Deployment management in high-impact technology infrastructures."
+		}
+	},
+	"profile": {
+		"title": "/etc/profile",
+		"description": "Driven by efficiency and open-source philosophy. My tech stack and environment are constantly optimized for maximum performance. Here is how I got here:",
+		"timeline": {
+			"2022": "2022: Started my dev journey. Windows and VSCode were my comfort zone.",
+			"2023": "2023: First encounters with Open Source. The terminal was still intimidating.",
+			"2024": "2024: The turning point. Mint and Pop!_OS became my daily drivers.",
+			"2025": "2025: The definitive leap to Fedora. Goodbye VSCode, hello Neovim.",
+			"2026": "2026: Maximizing efficiency with Hyprland and Waybar. Full mastery of my environment."
+		},
+		"btnBio": "[ cat bio_completa.md ]"
+	},
+	"experience": {
+		"title": "/var/log/work_history.log",
+		"job1": {
+			"date": "[ 2024 - present ]",
+			"title": "FULL STACK WEB DEVELOPER @ Secretaría de Innovación de la Presidencia",
+			"description": "Engineered and optimized full-stack solutions using Vue.js and Laravel to enhance internal project management and data reporting. Streamlined developer workflows and eliminated environment inconsistencies by implementing Docker containerization for seamless deployments."
+		},
+		"job2": {
+			"date": "[ 2022 - 2024 ]",
+			"title": "SOFTWARE DEVELOPER @ Instituto Técnico Ricaldone",
+			"description": "Developed and maintained robust RESTful APIs using FastAPI and Express, ensuring 99.9% uptime. Improved the user experience for over 1,000 students by refactoring Vue UI components, while securely administering Moodle, Google, and Microsoft cloud platforms."
+		}
+	},
+	"projects": {
+		"title": "/home/projects",
+		"prevProjects": "Previous projects",
+		"nextProjects": "Next projects",
+		"project1": {
+			"title": "NEOVIM CONFIG",
+			"description": "Minimalist and fast Neovim-based development environment optimized for modern web development (Vue, TS, JS). Features LSP, AI autocompletion (Copilot), advanced Git integration, and ultra-fast searching.",
+			"tags": ["Lua", "Markdown"]
+		},
+		"project2": {
+			"title": "SVELTE PORTFOLIO",
+			"description": "An interactive personal portfolio featuring a terminal and window manager style, developed with SvelteKit; it includes blog posts and a biography in Markdown format.",
+			"tags": ["Svelte", "Linux"]
+		},
+		"project3": {
+			"title": "COMMUNITY EVENTS APP",
+			"description": "A collaborative mobile application (university project) designed for managing events and attendance tracking. Developed using React Native, Expo, and Firebase.",
+			"tags": ["React Native", "Firebase"]
+		},
+		"project4": {
+			"title": "PERSONAL FINANCE APP",
+			"description": "A web application for personal finance management, tracking income and expenses. Developed using Laravel 12 and Blade, featuring custom accounts, categories, charts, and 2FA authentication.",
+			"tags": ["Laravel", "Blade"]
+		},
+		"project5": {
+			"title": "VUE 3 TEMPLATE",
+			"description": "A base template for rapid development of modern web applications using Vue 3 and Vuetify 3. Pre-configured with Pinia for state management and Vue Router.",
+			"tags": ["Vue 3", "Vuetify", "Vite"]
+		}
+	},
+	"stack": {
+		"development": {
+			"title": "~/.config/stack/development.json"
+		},
+		"infrastructure": {
+			"title": "~/.config/stack/infrastructure.json"
+		}
+	},
+	"blog": {
+		"title": "/var/log/latest_notes",
+		"post1": {
+			"title": "Optimizing Neovim for Vue/Svelte",
+			"date": "2024-10-24",
+			"description": "A deep dive into setting up LSP, Treesitter, and formatting tools to create a blazing fast development environment for modern frontend frameworks without the bloat of an IDE."
+		},
+		"post2": {
+			"title": "Dokploy + Podman on Alma Linux",
+			"date": "2024-09-12",
+			"description": "Moving away from Docker daemon dependencies. How I configured Dokploy to seamlessly manage rootless Podman containers on a fresh Alma Linux instance for secure, self-hosted deployments."
+		},
+		"btnAllNotes": "[ ls -l /var/log/todas_las_notas ]",
+		"pageTitle": "/var/log/todas_las_notas"
+	},
+	"contact": {
+		"title": "/usr/bin/contact",
+		"echo": "$ echo \"Let's build something.\" > contact.txt",
+		"form": {
+			"name": "$NOMBRE",
+			"email": "$EMAIL",
+			"message": "Mensaje: STDIN",
+			"submit": "[ ./send_message.sh ]"
+		},
+		"network": {
+			"title": "[ NETWORK INTERFACES & SYS_INFO ]",
+			"ping": "ping -c 1 oliver.dev",
+			"github": "github",
+			"githubUrl": "-> curl -s api.github.com/users/10Oliver",
+			"linkedin": "linkedin",
+			"linkedinUrl": "-> xdg-open linkedin.com/in/oliver-erazo",
+			"cv": "cv",
+			"cvUrl": "-> cat ~/docs/cv_oliver.md"
+		},
+		"info": {
+			"location": "Location:",
+			"locationValue": "El Salvador (CST / UTC-6)",
+			"uptime": "Uptime:",
+			"uptimeValue": "99.9%",
+			"status": "Status:",
+			"statusValue": "200 OK",
+			"statusAccepting": "[Accepting New Projects]"
+		}
+	},
+	"about": {
+		"title": "/usr/bin/whoami",
+		"command": "whoami --verbose --human",
+		"userInfo": "[ USER_INFO ]",
+		"userName": "Name: Oliver Alejandro Erazo Reyes",
+		"userRole": "Role: Full Stack Web Developer",
+		"userStatus": "Status:",
+		"userStatusValue": "Running, fueled by curiosity and terminal efficiency.",
+		"aboutTitle": "[ ABOUT ]",
+		"aboutText": "I am a software engineer passionate about building efficient, adaptable, and scalable solutions. My approach bridges the gap between robust backend architectures and seamless user experiences.\n\nWhen I am not configuring servers, writing code, or optimizing my Neovim environment, you will probably find me running—a physical discipline that gives me the focus and balance needed to tackle the next technical challenge.",
+		"timelineTitle": "/var/log/sys_evolution.log",
+		"timeline": {
+			"2026": {
+				"title": "BARE_METAL_MASTERY",
+				"description": "Replaced traditional desktop environments with Hyprland and Waybar. Fast, minimalist, and entirely terminal-driven."
+			},
+			"2025": {
+				"title": "PRODUCTIVITY_OVERRIDE",
+				"description": "The definitive shift. Moved to Fedora. More importantly, I left VSCode behind and fully embraced Neovim to maximize productivity."
+			},
+			"2024": {
+				"title": "SUCCESSFUL_MIGRATION",
+				"description": "The turning point. Gave Linux another try with Mint, then Pop!_OS. The experience was seamless, and I finally made it my daily driver."
+			},
+			"2023": {
+				"title": "KERNEL_PANIC_AND_ROLLBACK",
+				"description": "The first leap. Tried Manjaro as my main OS. I struggled with dependencies, feared the terminal, and eventually retreated back to Windows."
+			},
+			"2022": {
+				"title": "DEV_ENVIRONMENT_START",
+				"description": "\"Hello, World.\" Officially started my path as a developer. Windows and VSCode were my ultimate comfort zone."
+			},
+			"2021": {
+				"title": "VIRTUALIZATION_TEST",
+				"description": "The seed of curiosity. I virtualized my first Ubuntu instance and got my first glimpse into the Linux ecosystem."
+			},
+			"2015": {
+				"title": "SYSTEM_INIT",
+				"description": "My first PC. I was a standard Windows user, completely unaware of the broader tech world and programming."
+			}
+		},
+		"configTitle": "~/.config/mindset.conf",
+		"configComment1": "# CORE PHILOSOPHY",
+		"configComment2": "# Simplicity is the ultimate sophistication. I strongly",
+		"configComment3": "# believe in the UNIX philosophy: write programs that do",
+		"configComment4": "# one thing and do it well.",
+		"configComment5": "# ARCHITECTURE APPROACH",
+		"configComment6": "# I aim for code that is not just functional, but efficient,",
+		"configComment7": "# maintainable, and built on solid architectures. I thrive",
+		"configComment8": "# in the terminal because it strips away distractions,",
+		"configComment9": "# allowing me to focus entirely on problem-solving.",
+		"pageTitle": "About | Oliver's Portfolio",
+		"pageDescription": "Oliver's complete biography"
+	},
+	"blogPage": {
+		"title": "Blog | Oliver's Portfolio",
+		"description": "Latest articles from the terminal"
+	},
+	"help": {
+		"title": "Neovim Command Palette",
+		"close": "Close help",
+		"commands": {
+			"e": {
+				"command": ":e [route]",
+				"description": "Navigates to different sections of the portfolio. Example: :e projects, :e blog."
+			},
+			"colorscheme": {
+				"command": ":colorscheme [theme]",
+				"description": "Changes the global color palette. Example: :colorscheme dracula."
+			},
+			"q": {
+				"command": ":q",
+				"description": "Closes the interactive command console."
+			},
+			"help": {
+				"command": ":help",
+				"description": "Shows this on-screen help menu."
+			}
+		}
+	},
+	"footer": {
+		"version": "v1.9.0-stable [GNU/Linux]"
+	},
+	"console": {
+		"matrixHint": "Wake up, Oliver... The Matrix has you. Try the terminal: :colorscheme matrix"
+	}
+}
