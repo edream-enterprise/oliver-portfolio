@@ -60,18 +60,17 @@
 			<div class="font-code-block space-y-6 text-on-surface-variant whitespace-pre-wrap">
 				<div>
 					<span class="text-primary font-bold">[ USER_INFO ]</span>
-					Name: Oliver Alejandro Erazo Reyes Role: Full Stack Web Developer Status:
-					<span class="text-secondary font-bold">Running</span>, fueled by coffee and terminal
-					efficiency.
+Name: Oliver Alejandro Erazo Reyes 
+Role: Full Stack Web Developer 
+Status:
+					<span class="text-secondary font-bold">Running</span>, fueled by curiosity and terminal efficiency.
 				</div>
 
 				<div>
 					<span class="text-primary font-bold">[ ABOUT ]</span>
-					I am a software engineer passionate about building efficient, adaptable, and scalable solutions.
-					My approach bridges the gap between robust backend architectures and seamless user experiences.
-					When I am not configuring servers, writing code, or optimizing my Neovim environment, you will
-					probably find me running—a physical discipline that gives me the focus and balance needed to
-					tackle the next technical challenge.
+					I am a software engineer passionate about building efficient, adaptable, and scalable solutions. My approach bridges the gap between robust backend architectures and seamless user experiences. 
+
+When I am not configuring servers, writing code, or optimizing my Neovim environment, you will probably find me running—a physical discipline that gives me the focus and balance needed to tackle the next technical challenge.
 				</div>
 			</div>
 		</PaneCard>
