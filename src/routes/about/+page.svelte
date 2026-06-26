@@ -45,7 +45,8 @@
 	<!-- Component 2: The Timeline Log (The Journey) -->
 	<section>
 		<div class="mb-4 flex items-center gap-2">
-			<h2 class="font-headline-md text-primary">📂 {$_('about.timelineTitle')}</h2>
+			<span class="material-symbols-outlined text-primary" aria-hidden="true">folder_open</span>
+			<h2 class="font-headline-md text-primary">{$_('about.timelineTitle')}</h2>
 		</div>
 		<PaneCard>
 			<div class="border-l border-outline-variant ml-3 space-y-8 py-2">
@@ -69,7 +70,8 @@
 	<!-- Component 3: Configuration File (Philosophy) -->
 	<section>
 		<div class="mb-4 flex items-center gap-2">
-			<h2 class="font-headline-md text-primary">⚙️ {$_('about.configTitle')}</h2>
+			<span class="material-symbols-outlined text-primary" aria-hidden="true">settings</span>
+			<h2 class="font-headline-md text-primary">{$_('about.configTitle')}</h2>
 		</div>
 		<PaneCard class="text-sm md:text-base min-w-0">
 			<pre class="font-code-block leading-relaxed overflow-x-auto w-full"><code

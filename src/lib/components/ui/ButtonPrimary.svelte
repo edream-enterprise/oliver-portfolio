@@ -26,7 +26,7 @@
 		{href}
 		{target}
 		{rel}
-		class="btn-primary font-label-sm px-6 py-3 uppercase rounded-none whitespace-nowrap inline-block text-center {className}"
+		class="btn-primary text-[13px] sm:text-sm px-4 sm:px-6 py-2.5 sm:py-3 uppercase rounded-none inline-block text-center break-all sm:whitespace-nowrap {className}"
 		{onclick}
 	>
 		{@render children()}
@@ -35,7 +35,7 @@
 {:else}
 	<button
 		{type}
-		class="btn-primary font-label-sm px-6 py-3 uppercase rounded-none whitespace-nowrap cursor-pointer {className}"
+		class="btn-primary text-[13px] sm:text-sm px-4 sm:px-6 py-2.5 sm:py-3 uppercase rounded-none cursor-pointer break-all sm:whitespace-nowrap {className}"
 		{onclick}
 	>
 		{@render children()}

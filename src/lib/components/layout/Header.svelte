@@ -11,12 +11,12 @@
 </script>
 
 <header
-	class="fixed top-0 left-0 w-full z-50 flex flex-row flex-nowrap justify-between items-center px-gutter h-8 bg-surface border-b border-outline-variant"
+	class="fixed top-0 left-0 w-full z-50 flex flex-row justify-between items-center px-gutter h-8 bg-surface border-b border-outline-variant overflow-hidden"
 >
-	<div class="flex items-center h-full flex-shrink-0">
+	<div class="flex items-center h-full flex-shrink-0 min-w-0">
 		<a
 			href={resolve('/')}
-			class="waybar-module font-label-sm text-primary hover:bg-primary-container hover:text-white transition-all duration-200 hover:brightness-110 whitespace-nowrap"
+			class="flex items-center h-full px-2 font-label-sm text-primary hover:bg-primary-container hover:text-white transition-all duration-200 hover:brightness-110 whitespace-nowrap"
 		>
 			oliver@almalinux: ~
 		</a>
@@ -47,27 +47,27 @@
 			href={resolve('/blog')}>{$_('nav.garden')}</a
 		>
 	</nav>
-	<div class="flex items-center h-full gap-2 text-primary">
+	<div class="flex items-center justify-end gap-2 sm:gap-3 text-primary flex-shrink-0">
 		<span
-			class="material-symbols-outlined text-[16px] waybar-module cursor-pointer hover:opacity-80"
+			class="material-symbols-outlined text-[16px] flex items-center justify-center w-6 h-6 cursor-pointer hover:opacity-80 hover:bg-surface-variant rounded-sm transition-all"
 			aria-hidden="true"
 			onclick={toggleSystemMonitor}
 			title={$_('header.systemMonitor')}>memory</span
 		>
 		<span
-			class="material-symbols-outlined text-[16px] waybar-module cursor-pointer hover:opacity-80"
+			class="material-symbols-outlined text-[16px] flex items-center justify-center w-6 h-6 cursor-pointer hover:opacity-80 hover:bg-surface-variant rounded-sm transition-all"
 			aria-hidden="true"
 			onclick={openNeovim}
 			title={$_('header.openTerminal')}>terminal</span
 		>
 		<span
-			class="material-symbols-outlined text-[16px] waybar-module cursor-pointer hover:opacity-80"
+			class="material-symbols-outlined text-[16px] flex items-center justify-center w-6 h-6 cursor-pointer hover:opacity-80 hover:bg-surface-variant rounded-sm transition-all"
 			aria-hidden="true"
 			onclick={toggleLanguage}
 			title={$_('header.toggleLanguage')}>translate</span
 		>
 		<span
-			class="material-symbols-outlined text-[16px] waybar-module cursor-pointer hover:opacity-80"
+			class="material-symbols-outlined text-[16px] flex items-center justify-center w-6 h-6 cursor-pointer hover:opacity-80 hover:bg-surface-variant rounded-sm transition-all"
 			aria-hidden="true"
 			onclick={toggleThemeDropdown}
 			title={$_('header.selectTheme')}>palette</span

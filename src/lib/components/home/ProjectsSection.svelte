@@ -28,7 +28,7 @@
 	<div class="mb-8 flex items-center justify-between">
 		<div class="flex items-center gap-2">
 			<span class="material-symbols-outlined text-primary" aria-hidden="true">folder_open</span>
-			<h2 class="font-headline-md text-primary">{$_('projects.title')}</h2>
+			<h2 class="font-headline-md text-lg sm:text-2xl text-primary break-all">{$_('projects.title')}</h2>
 		</div>
 		<div class="flex items-center gap-2 hidden sm:flex">
 			<button

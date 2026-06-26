@@ -8,7 +8,7 @@
 		<div class="flex flex-col min-w-0">
 			<div class="mb-4 flex items-center gap-2">
 				<span class="material-symbols-outlined text-primary" aria-hidden="true">code</span>
-				<h2 class="font-headline-md text-primary">{$_('stack.development.title')}</h2>
+				<h2 class="font-headline-md text-base sm:text-xl text-primary break-all">{$_('stack.development.title')}</h2>
 			</div>
 			<div class="bg-surface-dim pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">
 				<pre class="font-code-block text-on-surface-variant"><span class="text-on-surface-variant"
@@ -65,7 +65,7 @@
 		<div class="flex flex-col min-w-0">
 			<div class="mb-4 flex items-center gap-2">
 				<span class="material-symbols-outlined text-primary" aria-hidden="true">dns</span>
-				<h2 class="font-headline-md text-primary">{$_('stack.infrastructure.title')}</h2>
+				<h2 class="font-headline-md text-base sm:text-xl text-primary break-all">{$_('stack.infrastructure.title')}</h2>
 			</div>
 			<div class="bg-surface-dim pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">
 				<pre class="font-code-block text-on-surface-variant"><span class="text-on-surface-variant"
