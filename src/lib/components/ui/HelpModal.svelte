@@ -50,6 +50,51 @@
 				<div
 					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
 				>
+					{$_('help.commands.set.command')}
+				</div>
+				<div class="text-on-surface-variant">
+					{$_('help.commands.set.description')}
+				</div>
+
+				<div
+					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
+				>
+					{$_('help.commands.hardcopy.command')}
+				</div>
+				<div class="text-on-surface-variant">
+					{$_('help.commands.hardcopy.description')}
+				</div>
+
+				<div
+					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
+				>
+					{$_('help.commands.search.command')}
+				</div>
+				<div class="text-on-surface-variant">
+					{$_('help.commands.search.description')}
+				</div>
+
+				<div
+					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
+				>
+					{$_('help.commands.n.command')}
+				</div>
+				<div class="text-on-surface-variant">
+					{$_('help.commands.n.description')}
+				</div>
+
+				<div
+					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
+				>
+					{$_('help.commands.replace.command')}
+				</div>
+				<div class="text-on-surface-variant">
+					{$_('help.commands.replace.description')}
+				</div>
+
+				<div
+					class="text-secondary font-bold border-b md:border-b-0 border-outline-variant pb-1 md:pb-0"
+				>
 					{$_('help.commands.q.command')}
 				</div>
 				<div class="text-on-surface-variant">{$_('help.commands.q.description')}</div>

@@ -36,6 +36,14 @@ export function toggleLanguage() {
 	}
 }
 
+export function setLanguage(newLang: 'en' | 'es') {
+	globalState.language = newLang;
+	locale.set(newLang);
+	if (browser) {
+		localStorage.setItem('language', newLang);
+	}
+}
+
 export function toggleSystemMonitor() {
 	globalState.systemMonitorOpen = !globalState.systemMonitorOpen;
 	if (globalState.systemMonitorOpen) {

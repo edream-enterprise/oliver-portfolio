@@ -213,6 +213,26 @@
 				"command": ":colorscheme [theme]",
 				"description": "Changes the global color palette. Example: :colorscheme dracula."
 			},
+			"set": {
+				"command": ":set lang=[en|es]",
+				"description": "Changes the language of the portfolio. Example: :set lang=es."
+			},
+			"hardcopy": {
+				"command": ":hardcopy",
+				"description": "Prints Oliver's CV."
+			},
+			"search": {
+				"command": "/[text]",
+				"description": "Searches and highlights text on the page. Example: /vue."
+			},
+			"n": {
+				"command": "n / :n",
+				"description": "Finds the next occurrence of the search."
+			},
+			"replace": {
+				"command": ":%s/[old]/[new]/g",
+				"description": "Live text replacement on the page. Example: :%s/Oliver/Hacker/g."
+			},
 			"q": {
 				"command": ":q",
 				"description": "Closes the interactive command console."
