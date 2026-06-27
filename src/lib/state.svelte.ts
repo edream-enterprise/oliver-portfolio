@@ -72,3 +72,7 @@ export function toggleHelpModal() {
 export function toggleGlowMode() {
 	globalState.glowMode = !globalState.glowMode;
 }
+
+export function setGlowMode(value: boolean) {
+	globalState.glowMode = value;
+}

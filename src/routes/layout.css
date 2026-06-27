@@ -124,6 +124,7 @@
 		--color-secondary-container: #bd93f9;
 		--color-on-background: #f8f8f2;
 		--color-outline-variant: #6272a4;
+		--color-secondary: #bd93f9;
 	}
 
 	:root.theme-gruvbox {
@@ -136,6 +137,7 @@
 		--color-secondary-container: #b8bb26;
 		--color-on-background: #ebdbb2;
 		--color-outline-variant: #a89984;
+		--color-secondary: #b8bb26;
 	}
 
 	:root.theme-matrix {
@@ -153,6 +155,7 @@
 		--color-error: #00ffff; /* JSON strings might be picking up error or tertiary colors */
 		--color-error-container: #005555;
 		--color-tertiary: #00ffff;
+		--color-secondary: #00ffff;
 	}
 
 	:root.theme-light {

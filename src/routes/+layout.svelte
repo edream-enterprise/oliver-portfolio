@@ -27,6 +27,39 @@
 			}
 		}
 	});
+
+	// Idle Timer (Easter Egg)
+	let idleTimeout: ReturnType<typeof setTimeout>;
+
+	function resetIdleTimer() {
+		clearTimeout(idleTimeout);
+		// 5 minutes = 300,000 ms
+		idleTimeout = setTimeout(() => {
+			if (typeof window !== 'undefined') {
+				import('$lib/state.svelte').then(({ setGlowMode }) => {
+					setGlowMode(true);
+				});
+			}
+		}, 300000);
+	}
+
+	$effect(() => {
+		if (typeof window !== 'undefined') {
+			resetIdleTimer();
+			window.addEventListener('mousemove', resetIdleTimer);
+			window.addEventListener('keydown', resetIdleTimer);
+			window.addEventListener('touchstart', resetIdleTimer);
+			window.addEventListener('scroll', resetIdleTimer);
+
+			return () => {
+				clearTimeout(idleTimeout);
+				window.removeEventListener('mousemove', resetIdleTimer);
+				window.removeEventListener('keydown', resetIdleTimer);
+				window.removeEventListener('touchstart', resetIdleTimer);
+				window.removeEventListener('scroll', resetIdleTimer);
+			};
+		}
+	});
 </script>
 
 <svelte:head>

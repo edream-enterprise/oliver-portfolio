@@ -385,6 +385,25 @@
 	let artIndex = $state(0);
 	let intervalId: ReturnType<typeof setInterval>;
 
+	let clickCount = $state(0);
+	let clickTimeout: ReturnType<typeof setTimeout>;
+
+	function handleSvgClick() {
+		clickCount++;
+		if (clickCount === 7) {
+			if (typeof window !== 'undefined') {
+				import('$lib/state.svelte').then(({ toggleGlowMode }) => {
+					toggleGlowMode();
+				});
+			}
+			clickCount = 0;
+		}
+		clearTimeout(clickTimeout);
+		clickTimeout = setTimeout(() => {
+			clickCount = 0;
+		}, 1500);
+	}
+
 	onMount(() => {
 		intervalId = setInterval(() => {
 			artIndex = (artIndex + 1) % asciiArts.length;
@@ -423,9 +442,14 @@
 		</div>
 	</div>
 	<div class="flex justify-center md:justify-end items-center md:pr-12 lg:pr-24 min-h-[300px]">
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 		<svg
+			onclick={handleSvgClick}
+			role="img"
+			aria-label="Hero Logo"
 			viewBox={parsedArts[artIndex].viewBox}
-			class="w-[240px] sm:w-[280px] md:w-[320px] lg:w-[360px] h-auto text-primary drop-shadow-[0_0_15px_rgba(255,86,43,0.35)] select-none transition-all duration-300"
+			class="w-[240px] sm:w-[280px] md:w-[320px] lg:w-[360px] h-auto text-primary drop-shadow-[0_0_15px_rgba(255,86,43,0.35)] select-none transition-all duration-300 cursor-pointer"
 		>
 			<path d={parsedArts[artIndex].path} fill="currentColor" />
 		</svg>
