@@ -3,6 +3,8 @@
 	import { _ } from 'svelte-i18n';
 </script>
 
+<svelte:window onkeydown={(e) => { if (e.key === 'Escape') globalState.helpModalOpen = false; }} />
+
 {#if globalState.helpModalOpen}
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -15,7 +17,7 @@
 			onclick={(e) => e.stopPropagation()}
 		>
 			<button
-				class="absolute top-2 right-2 text-on-surface-variant hover:text-error"
+				class="absolute top-2 right-2 text-on-surface-variant hover:text-error cursor-pointer select-none"
 				onclick={toggleHelpModal}
 				aria-label={$_('help.close')}
 			>

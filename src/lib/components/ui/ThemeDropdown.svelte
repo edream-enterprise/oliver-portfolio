@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { globalState, setTheme, toggleThemeDropdown } from '$lib/state.svelte';
+	import { _ } from 'svelte-i18n';
 
 	const themes = [
 		{ id: 'default', name: 'Almalinux (Default)' },
@@ -14,6 +15,8 @@
 	}
 </script>
 
+<svelte:window onkeydown={(e) => { if (e.key === 'Escape') globalState.themeDropdownOpen = false; }} />
+
 {#if globalState.themeDropdownOpen}
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -24,7 +27,7 @@
 		<div
 			class="px-3 py-2 border-b border-outline-variant text-on-surface-variant text-xs font-bold bg-surface-variant"
 		>
-			Select Theme
+			{$_('header.selectTheme')}
 		</div>
 		{#each themes as theme (theme.id)}
 			<button

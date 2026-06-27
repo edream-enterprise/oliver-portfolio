@@ -243,6 +243,18 @@
 			}
 		}
 	},
+	"systemInfo": {
+		"close": "Cerrar monitor",
+		"os": "OS:",
+		"wm": "WM:",
+		"shell": "Shell:",
+		"terminal": "Terminal:",
+		"uptime": "Tiempo activo:",
+		"memory": "Memoria:",
+		"themes": "Temas:",
+		"loaded": "cargados",
+		"encrypted": "encriptado"
+	},
 	"footer": {
 		"version": "v1.9.0-stable [GNU/Linux]"
 	},
