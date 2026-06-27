@@ -3,7 +3,7 @@
 	import { _ } from 'svelte-i18n';
 
 	const themes = [
-		{ id: 'default', name: 'Almalinux (Default)' },
+		{ id: 'default', name: 'Default' },
 		{ id: 'dracula', name: 'Dracula' },
 		{ id: 'gruvbox', name: 'Gruvbox' },
 		{ id: 'light', name: 'Light' },
