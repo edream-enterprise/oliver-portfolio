@@ -228,7 +228,7 @@
 					else command = `set ${langs[0]}`;
 				}
 			} else if (cmdParts.length === 2 && cmdParts[0].toLowerCase() === 'colorscheme') {
-				const themes = ['default', 'dracula', 'gruvbox', 'light'];
+				const themes = ['default', 'dracula', 'gruvbox', 'light', 'tokyonight', 'onedarkpro', 'cyberpurple', 'abyss'];
 				const exactIdx = themes.indexOf(cmdParts[1].toLowerCase());
 				if (exactIdx !== -1) {
 					command = `colorscheme ${themes[(exactIdx + 1) % themes.length]}`;

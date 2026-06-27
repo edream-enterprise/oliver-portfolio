@@ -6,7 +6,11 @@
 		{ id: 'default', name: 'Almalinux (Default)' },
 		{ id: 'dracula', name: 'Dracula' },
 		{ id: 'gruvbox', name: 'Gruvbox' },
-		{ id: 'light', name: 'Light' }
+		{ id: 'light', name: 'Light' },
+		{ id: 'tokyonight', name: 'Tokyo Night' },
+		{ id: 'onedarkpro', name: 'One Dark Pro' },
+		{ id: 'cyberpurple', name: 'Cyber Purple 77' },
+		{ id: 'abyss', name: 'Deep Abyss' }
 	];
 
 	function handleThemeSelect(themeId: string) {

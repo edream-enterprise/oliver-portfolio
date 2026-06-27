@@ -175,6 +175,59 @@
 		--color-error: #ef4444;
 	}
 
+	:root.theme-tokyonight {
+		--color-background: #1a1b26;
+		--color-surface: #24283b;
+		--color-surface-dim: #16161e;
+		--color-on-surface: #a9b1d6;
+		--color-primary: #7aa2f7;
+		--color-primary-container: #7aa2f7;
+		--color-secondary-container: #bb9af7;
+		--color-on-background: #a9b1d6;
+		--color-outline-variant: #414868;
+		--color-secondary: #bb9af7;
+	}
+
+	:root.theme-onedarkpro {
+		--color-background: #282c34;
+		--color-surface: #2c313a;
+		--color-surface-dim: #21252b;
+		--color-on-surface: #abb2bf;
+		--color-primary: #61afef;
+		--color-primary-container: #61afef;
+		--color-secondary-container: #c678dd;
+		--color-on-background: #abb2bf;
+		--color-outline-variant: #3e4451;
+		--color-secondary: #c678dd;
+	}
+
+	:root.theme-cyberpurple {
+		--color-background: #0f001a;
+		--color-surface: #1a002c;
+		--color-surface-dim: #0a0012;
+		--color-on-surface: #f0a4ff;
+		--color-primary: #df58ff;
+		--color-primary-container: #df58ff;
+		--color-secondary-container: #00f0ff;
+		--color-on-background: #f0a4ff;
+		--color-outline-variant: #3a005c;
+		--color-secondary: #00f0ff;
+	}
+
+	:root.theme-abyss {
+		--color-background: #000000;
+		--color-surface: #0a0a0a;
+		--color-surface-dim: #050505;
+		--color-on-surface: #d1d5db;
+		--color-primary: #00ffcc;
+		--color-primary-container: #00ffcc;
+		--color-secondary-container: #ff003c;
+		--color-on-background: #d1d5db;
+		--color-outline-variant: #1f1f1f;
+		--color-secondary: #ff003c;
+		--btn-text-color: #000000;
+	}
+
 	.glow-mode body {
 		text-shadow: 0 0 2px currentColor;
 	}
@@ -224,7 +277,8 @@
 	}
 
 	.btn-primary {
-		@apply bg-primary-container text-white transition-all duration-200 hover:brightness-110;
+		@apply bg-primary-container transition-all duration-200 hover:brightness-110;
+		color: var(--btn-text-color, #ffffff);
 	}
 
 	.btn-secondary {
