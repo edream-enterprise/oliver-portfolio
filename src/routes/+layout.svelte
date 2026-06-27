@@ -16,7 +16,8 @@
 	$effect(() => {
 		if (typeof document !== 'undefined') {
 			document.documentElement.className =
-				globalState.theme === 'default' ? '' : `theme-${globalState.theme}`;
+				(globalState.theme === 'default' ? '' : `theme-${globalState.theme}`) +
+				(globalState.glowMode ? ' glow-mode' : '');
 
 			if (globalState.theme === 'default') {
 				console.log(

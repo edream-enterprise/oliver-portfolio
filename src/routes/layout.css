@@ -171,6 +171,32 @@
 		--color-on-surface-variant: #475569;
 		--color-error: #ef4444;
 	}
+
+	.glow-mode body {
+		text-shadow: 0 0 2px currentColor;
+	}
+	.glow-mode h1, .glow-mode h2, .glow-mode h3, .glow-mode h4, .glow-mode h5, .glow-mode h6 {
+		text-shadow: 0 0 8px currentColor, 0 0 12px currentColor;
+	}
+	.glow-mode p, .glow-mode span, .glow-mode a {
+		text-shadow: 0 0 2px currentColor;
+	}
+	.glow-mode .pane-border, .glow-mode .card {
+		box-shadow: 0 0 8px var(--color-primary) !important;
+		border-color: var(--color-primary) !important;
+	}
+	.glow-mode svg, .glow-mode img {
+		filter: drop-shadow(0 0 8px currentColor) drop-shadow(0 0 16px currentColor) !important;
+		text-shadow: none !important;
+	}
+	.glow-mode .btn-primary {
+		box-shadow: 0 0 12px var(--color-primary-container) !important;
+		border-color: var(--color-primary-container) !important;
+	}
+	.glow-mode .btn-secondary {
+		box-shadow: 0 0 12px var(--color-secondary-container) !important;
+		border-color: var(--color-secondary-container) !important;
+	}
 }
 
 @layer components {

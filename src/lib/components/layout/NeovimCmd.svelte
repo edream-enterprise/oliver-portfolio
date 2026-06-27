@@ -122,6 +122,13 @@
 					});
 				}
 				active = false;
+			} else if (cmd === 'glow') {
+				if (typeof window !== 'undefined') {
+					import('$lib/state.svelte').then(({ toggleGlowMode }) => {
+						toggleGlowMode();
+					});
+				}
+				active = false;
 			} else if (cmd === 'colorscheme' && cmdParts.length > 1) {
 				const theme = cmdParts[1];
 				if (typeof window !== 'undefined') {
@@ -192,7 +199,7 @@
 			const cmdParts = val.split(' ');
 			
 			if (cmdParts.length === 1) {
-				const cmds = ['q', 'help', 'colorscheme', 'e', 'set', 'hardcopy', 'n', '%s/', 's/'];
+				const cmds = ['q', 'help', 'colorscheme', 'e', 'set', 'hardcopy', 'n', '%s/', 's/', 'glow'];
 				const exactIdx = cmds.indexOf(cmdParts[0].toLowerCase());
 				if (exactIdx !== -1) {
 					command = cmds[(exactIdx + 1) % cmds.length];

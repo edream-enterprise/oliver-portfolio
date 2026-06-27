@@ -20,7 +20,8 @@ export const globalState = $state({
 	language: getInitialLanguage(),
 	systemMonitorOpen: false,
 	themeDropdownOpen: false,
-	helpModalOpen: false
+	helpModalOpen: false,
+	glowMode: false
 });
 
 export function setTheme(newTheme: string) {
@@ -66,4 +67,8 @@ export function toggleHelpModal() {
 		globalState.systemMonitorOpen = false;
 		globalState.themeDropdownOpen = false;
 	}
+}
+
+export function toggleGlowMode() {
+	globalState.glowMode = !globalState.glowMode;
 }
