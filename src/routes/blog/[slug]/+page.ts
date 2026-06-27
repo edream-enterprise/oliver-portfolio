@@ -1,16 +1,13 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import type { BlogPostMeta } from '$lib/blog';
+import { loadBlogPostVariants } from '$lib/blog';
 
 export const load: PageLoad = async ({ params }) => {
-	try {
-		const post = await import(`../../../lib/content/blog/${params.slug}.md`);
+	const variants = loadBlogPostVariants(params.slug);
 
-		return {
-			content: post.default,
-			meta: post.metadata as BlogPostMeta
-		};
-	} catch {
+	if (variants.length === 0) {
 		error(404, `Could not find ${params.slug}`);
 	}
+
+	return { variants };
 };

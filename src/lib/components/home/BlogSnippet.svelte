@@ -3,9 +3,11 @@
 	import { resolve } from '$app/paths';
 	import PaneCard from '$lib/components/ui/PaneCard.svelte';
 	import ButtonPrimary from '$lib/components/ui/ButtonPrimary.svelte';
-	import type { BlogPostMeta } from '$lib/blog';
+	import { getLocalizedBlogPosts, type BlogPostMeta } from '$lib/blog';
+	import { globalState } from '$lib/state.svelte';
 
 	let { posts }: { posts: BlogPostMeta[] } = $props();
+	let localizedPosts = $derived(getLocalizedBlogPosts(posts, globalState.language, { limit: 2 }));
 </script>
 
 <section class="border-outline-variant border-b py-16" id="blog">
@@ -14,7 +16,7 @@
 		<h2 class="font-headline-md text-primary break-all text-base sm:text-lg">{$_('blog.title')}</h2>
 	</div>
 	<div class="flex flex-col gap-4">
-		{#each posts as post (post.slug)}
+		{#each localizedPosts as post (post.slug)}
 			<PaneCard variant="primary" href={resolve(`/blog/${post.slug}`)} class="group">
 				<div class="mb-2 flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
 					<h3

@@ -111,7 +111,12 @@
 			"description": "Alejándome de las dependencias del daemon de Docker. Cómo configuré Dokploy para gestionar sin problemas contenedores Podman sin root en una instancia fresca de Alma Linux para despliegues autohospedados seguros."
 		},
 		"btnAllNotes": "[ ls -l /var/log/todas_las_notas ]",
-		"pageTitle": "/var/log/todas_las_notas"
+		"pageTitle": "/var/log/todas_las_notas",
+		"readMore": "leer mas",
+		"backCommand": "cd /blog",
+		"backToAllNotes": "volver a todas las notas",
+		"dateLabel": "Fecha",
+		"languageLabel": "Idioma"
 	},
 	"contact": {
 		"title": "/usr/bin/contacto",

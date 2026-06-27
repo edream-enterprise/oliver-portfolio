@@ -1,19 +1,26 @@
 <script lang="ts">
+	import { _ } from 'svelte-i18n';
 	import { resolve } from '$app/paths';
 	import BlogViewToggle from '$lib/components/blog/BlogViewToggle.svelte';
+	import { globalState } from '$lib/state.svelte';
 
 	let { data } = $props();
-	let Content = $derived(data.content);
+	let activePost = $derived(
+		data.variants.find((post) => post.language === globalState.language) ??
+			data.variants.find((post) => post.language === 'en') ??
+			data.variants[0]
+	);
+	let Content = $derived(activePost.content);
 
 	type ViewMode = 'terminal' | 'preview';
 	let viewMode = $state<ViewMode>('terminal');
 </script>
 
 <svelte:head>
-	<title>{data.meta.title} | Oliver's Portfolio</title>
-	<meta name="description" content={data.meta.excerpt ?? ''} />
-	{#if data.meta.canonicalUrl}
-		<link rel="canonical" href={data.meta.canonicalUrl} />
+	<title>{activePost.title} | Oliver's Portfolio</title>
+	<meta name="description" content={activePost.excerpt ?? ''} />
+	{#if activePost.canonicalUrl}
+		<link rel="canonical" href={activePost.canonicalUrl} />
 	{/if}
 </svelte:head>
 
@@ -23,7 +30,8 @@
 		href={resolve('/blog')}
 		class="font-code-block text-secondary hover:text-primary -mb-2 inline-flex w-max items-center gap-2 text-sm transition-colors"
 	>
-		<span aria-hidden="true">←</span> cd /blog
+		<span aria-hidden="true">←</span>
+		{$_('blog.backCommand')}
 	</a>
 
 	<!-- Post header -->
@@ -32,33 +40,31 @@
 		<div class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
 			<div class="flex flex-col gap-2">
 				<time class="font-code-block text-on-surface-variant text-xs uppercase">
-					[ Date: {data.meta.date} ]
+					[ {$_('blog.dateLabel')}: {activePost.date} ]
 				</time>
-				{#if data.meta.language}
-					<span class="font-code-block text-on-surface-variant text-xs uppercase">
-						[ Lang: {data.meta.language} ]
-					</span>
-				{/if}
+				<span class="font-code-block text-on-surface-variant text-xs uppercase">
+					[ {$_('blog.languageLabel')}: {activePost.language} ]
+				</span>
 			</div>
 			<BlogViewToggle onchange={(m) => (viewMode = m)} />
 		</div>
 
 		<!-- Title -->
 		<h1 class="font-headline-lg text-primary mb-3 uppercase leading-tight">
-			{data.meta.title}
+			{activePost.title}
 		</h1>
 
 		<!-- Excerpt -->
-		{#if data.meta.excerpt}
+		{#if activePost.excerpt}
 			<p class="font-body-md text-on-surface-variant mb-4 leading-relaxed">
-				{data.meta.excerpt}
+				{activePost.excerpt}
 			</p>
 		{/if}
 
 		<!-- Tags -->
-		{#if data.meta.tags && data.meta.tags.length > 0}
+		{#if activePost.tags && activePost.tags.length > 0}
 			<div class="flex flex-wrap gap-1.5">
-				{#each data.meta.tags as tag (tag)}
+				{#each activePost.tags as tag (tag)}
 					<span
 						class="font-code-block border-secondary-container text-secondary border px-1.5 py-0.5 text-xs uppercase"
 					>
@@ -70,10 +76,10 @@
 	</header>
 
 	<!-- Cover image -->
-	{#if data.meta.coverImage}
+	{#if activePost.coverImage}
 		<img
-			src={data.meta.coverImage}
-			alt={data.meta.title}
+			src={activePost.coverImage}
+			alt={activePost.title}
 			class="pane-border h-56 w-full object-cover"
 		/>
 	{/if}
@@ -105,7 +111,8 @@
 			href={resolve('/blog')}
 			class="font-code-block text-secondary hover:text-primary inline-flex items-center gap-2 text-sm transition-colors"
 		>
-			<span aria-hidden="true">←</span> back to all notes
+			<span aria-hidden="true">←</span>
+			{$_('blog.backToAllNotes')}
 		</a>
 	</div>
 </div>

@@ -2,8 +2,11 @@
 	import { _ } from 'svelte-i18n';
 	import { resolve } from '$app/paths';
 	import BlogViewToggle from '$lib/components/blog/BlogViewToggle.svelte';
+	import { getLocalizedBlogPosts } from '$lib/blog';
+	import { globalState } from '$lib/state.svelte';
 
 	let { data } = $props();
+	let localizedPosts = $derived(getLocalizedBlogPosts(data.posts, globalState.language));
 
 	type ViewMode = 'terminal' | 'preview';
 	let viewMode = $state<ViewMode>('terminal');
@@ -27,7 +30,7 @@
 	<!-- Terminal View -->
 	{#if viewMode === 'terminal'}
 		<div class="flex flex-col gap-4">
-			{#each data.posts as post (post.slug)}
+			{#each localizedPosts as post (post.slug)}
 				<a href={resolve(`/blog/${post.slug}`)} class="group block">
 					<article
 						class="pane-border pane-glow-primary bg-surface transform rounded-none p-5 transition-all group-hover:-translate-y-0.5"
@@ -66,10 +69,10 @@
 			{/each}
 		</div>
 
-	<!-- Markdown Preview View -->
+		<!-- Markdown Preview View -->
 	{:else}
 		<div class="flex flex-col gap-6">
-			{#each data.posts as post (post.slug)}
+			{#each localizedPosts as post (post.slug)}
 				<a href={resolve(`/blog/${post.slug}`)} class="group block">
 					<article
 						class="pane-border bg-surface group-hover:border-primary transition-all duration-200 p-6 md:p-8"
@@ -113,10 +116,8 @@
 									{/each}
 								{/if}
 							</div>
-							<span
-								class="font-code-block text-primary group-hover:underline text-xs uppercase"
-							>
-								read more →
+							<span class="font-code-block text-primary group-hover:underline text-xs uppercase">
+								{$_('blog.readMore')} →
 							</span>
 						</div>
 					</article>

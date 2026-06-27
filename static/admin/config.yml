@@ -24,6 +24,14 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 
 # ---------------------------------------------------------------------------
+# Internationalization
+# ---------------------------------------------------------------------------
+i18n:
+  structure: multiple_files
+  locales: ["en", "es"]
+  default_locale: "en"
+
+# ---------------------------------------------------------------------------
 # Collections
 # ---------------------------------------------------------------------------
 collections:
@@ -32,25 +40,34 @@ collections:
     folder: "src/lib/content/blog"
     create: true
     delete: true
+    i18n: true
     slug: "{{slug}}"
     extension: "md"
     format: "frontmatter"
+    preview_path: "blog/{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Title", name: "title", widget: "string", required: true,
+          i18n: true }
       - { label: "Slug", name: "slug", widget: "string", required: true,
-          hint: "URL-friendly identifier, e.g. my-first-post" }
+          hint: "Shared URL-friendly identifier, e.g. my-first-post",
+          i18n: true }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD",
-          date_format: "YYYY-MM-DD", time_format: false, required: true }
+          date_format: "YYYY-MM-DD", time_format: false, required: true,
+          i18n: true }
       - { label: "Excerpt", name: "excerpt", widget: "text", required: true,
-          hint: "Short summary shown in the blog index and meta description." }
+          hint: "Short summary shown in the blog index and meta description.",
+          i18n: true }
       - { label: "Cover Image", name: "coverImage", widget: "image", required: false,
-          hint: "Optional hero image (stored in /static/uploads/)." }
+          hint: "Optional hero image (stored in /static/uploads/).",
+          i18n: true }
       - { label: "Tags", name: "tags", widget: "list", required: false,
-          hint: "Comma-separated list of tags, e.g. DevOps, Linux, Neovim" }
+          hint: "Comma-separated list of tags, e.g. DevOps, Linux, Neovim",
+          i18n: true }
       - { label: "Draft", name: "draft", widget: "boolean", default: false,
-          hint: "When enabled, this post is hidden from public pages in production." }
-      - { label: "Language", name: "language", widget: "select",
-          options: ["en", "es"], default: "en", required: false }
+          hint: "When enabled, this post is hidden from public pages in production.",
+          i18n: true }
       - { label: "Canonical URL", name: "canonicalUrl", widget: "string", required: false,
-          hint: "Optional. Overrides the default canonical URL for cross-posted content." }
-      - { label: "Body", name: "body", widget: "markdown", required: true }
+          hint: "Optional. Overrides the default canonical URL for cross-posted content.",
+          i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", required: true,
+          i18n: true }
