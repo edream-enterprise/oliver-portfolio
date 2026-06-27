@@ -1,0 +1,2 @@
+# This directory holds media uploaded via Decap CMS.
+# Files here are served as /uploads/<filename> in production.

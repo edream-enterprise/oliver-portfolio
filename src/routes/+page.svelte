@@ -7,6 +7,8 @@
 	import StackSection from '$lib/components/home/StackSection.svelte';
 	import BlogSnippet from '$lib/components/home/BlogSnippet.svelte';
 	import ContactSection from '$lib/components/home/ContactSection.svelte';
+
+	let { data } = $props();
 </script>
 
 <HeroSection />
@@ -15,5 +17,5 @@
 <ExperienceSection />
 <ProjectsSection />
 <StackSection />
-<BlogSnippet />
+<BlogSnippet posts={data.latestPosts} />
 <ContactSection />

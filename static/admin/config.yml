@@ -1,0 +1,56 @@
+# Decap CMS Configuration
+# Docs: https://decapcms.org/docs/configuration-options/
+
+# The `backend` block is REQUIRED even when using local_backend.
+# `local_backend: true` proxies requests through `npx decap-server`
+# so you can edit files locally, but the backend definition must exist.
+#
+# For production on Dokploy, add `base_url` pointing to your self-hosted
+# GitHub OAuth proxy (e.g. sveltia-cms-auth or a custom worker).
+
+backend:
+  name: github
+  repo: 10Oliver/oliver-portfolio
+  branch: main
+  # Uncomment and set when deploying to Dokploy:
+  # base_url: https://your-oauth-proxy.example.com
+
+local_backend: true
+
+# ---------------------------------------------------------------------------
+# Media / Uploads
+# ---------------------------------------------------------------------------
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+# ---------------------------------------------------------------------------
+# Collections
+# ---------------------------------------------------------------------------
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/lib/content/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string", required: true,
+          hint: "URL-friendly identifier, e.g. my-first-post" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD",
+          date_format: "YYYY-MM-DD", time_format: false, required: true }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: true,
+          hint: "Short summary shown in the blog index and meta description." }
+      - { label: "Cover Image", name: "coverImage", widget: "image", required: false,
+          hint: "Optional hero image (stored in /static/uploads/)." }
+      - { label: "Tags", name: "tags", widget: "list", required: false,
+          hint: "Comma-separated list of tags, e.g. DevOps, Linux, Neovim" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false,
+          hint: "When enabled, this post is hidden from public pages in production." }
+      - { label: "Language", name: "language", widget: "select",
+          options: ["en", "es"], default: "en", required: false }
+      - { label: "Canonical URL", name: "canonicalUrl", widget: "string", required: false,
+          hint: "Optional. Overrides the default canonical URL for cross-posted content." }
+      - { label: "Body", name: "body", widget: "markdown", required: true }

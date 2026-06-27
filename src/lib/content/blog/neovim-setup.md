@@ -1,7 +1,11 @@
 ---
 title: 'Optimizing Neovim for Vue/Svelte'
+slug: 'neovim-setup'
 date: '2024-10-24'
 excerpt: 'A deep dive into setting up LSP, Treesitter, and formatting tools to create a blazing fast development environment for modern frontend frameworks without the bloat of an IDE.'
+tags: ['Neovim', 'Lua', 'LSP', 'DevTools']
+draft: false
+language: 'en'
 ---
 
 # Optimizing Neovim for Vue and Svelte

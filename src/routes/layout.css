@@ -159,20 +159,21 @@
 	}
 
 	:root.theme-light {
-		--color-background: #f4f7fc; /* Very light blue almost white */
-		--color-surface: #e8ecf4; /* Slightly darker light blue for cards */
-		--color-surface-dim: #dde3f0; /* Darker than surface for code blocks */
-		--color-on-surface: #334155;
-		--color-primary: #2563eb;
-		--color-primary-container: #2563eb;
+		--color-background: #f1f5f9;         /* Slate-100 — clean light base */
+		--color-surface: #ffffff;             /* Pure white cards — max contrast */
+		--color-surface-dim: #e2e8f0;         /* Slate-200 — code block bg */
+		--color-on-surface: #0f172a;          /* Slate-900 — near-black body text */
+		--color-on-background: #0f172a;
+		--color-primary: #1d4ed8;             /* Blue-700 — readable on white */
+		--color-primary-container: #1d4ed8;
 		--color-on-primary-container: #ffffff;
-		--color-secondary-container: #8b5cf6; /* Vibrant purple so it stands out */
-		--color-secondary: #8b5cf6;
-		--color-on-background: #334155;
-		--color-outline-variant: #cbd5e1;
-		--color-surface-variant: #f1f5f9;
-		--color-on-surface-variant: #475569;
-		--color-error: #ef4444;
+		--color-secondary: #7c3aed;           /* Violet-700 — readable on white */
+		--color-secondary-container: #7c3aed;
+		--color-on-secondary-container: #ffffff;
+		--color-outline-variant: #94a3b8;     /* Slate-400 — visible borders */
+		--color-surface-variant: #f8fafc;     /* Slate-50 */
+		--color-on-surface-variant: #334155;  /* Slate-700 — secondary text, WCAG AA */
+		--color-error: #dc2626;              /* Red-600 */
 	}
 
 	:root.theme-tokyonight {
@@ -254,6 +255,30 @@
 		border-color: var(--color-secondary-container) !important;
 	}
 }
+
+	/* -----------------------------------------------------------------------
+	 * Light theme: override prose-invert so blog content is readable.
+	 * prose-invert sets --tw-prose-* to white values; we reset them for
+	 * light backgrounds so text stays dark and visible.
+	 * ----------------------------------------------------------------------- */
+	:root.theme-light .prose {
+		--tw-prose-body: #0f172a;
+		--tw-prose-headings: #1d4ed8;
+		--tw-prose-lead: #334155;
+		--tw-prose-links: #1d4ed8;
+		--tw-prose-bold: #0f172a;
+		--tw-prose-counters: #334155;
+		--tw-prose-bullets: #334155;
+		--tw-prose-hr: #cbd5e1;
+		--tw-prose-quotes: #0f172a;
+		--tw-prose-quote-borders: #1d4ed8;
+		--tw-prose-captions: #475569;
+		--tw-prose-code: #7c3aed;
+		--tw-prose-pre-code: #0f172a;
+		--tw-prose-pre-bg: #e2e8f0;
+		--tw-prose-th-borders: #94a3b8;
+		--tw-prose-td-borders: #cbd5e1;
+	}
 
 @layer components {
 	.pane-border {
