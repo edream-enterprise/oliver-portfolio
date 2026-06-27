@@ -92,10 +92,10 @@
 	},
 	"stack": {
 		"development": {
-			"title": "~/.config/stack/development.json"
+			"title": "development.json"
 		},
 		"infrastructure": {
-			"title": "~/.config/stack/infrastructure.json"
+			"title": "infrastructure.json"
 		}
 	},
 	"blog": {

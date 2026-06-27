@@ -8,7 +8,7 @@
 <section class="py-16" id="contact">
 	<div class="mb-8 flex items-center gap-2">
 		<span class="material-symbols-outlined text-primary" aria-hidden="true">mail</span>
-		<h2 class="font-headline-md text-lg sm:text-2xl text-primary break-all">{$_('contact.title')}</h2>
+		<h2 class="font-headline-md text-base sm:text-lg text-primary break-all">{$_('contact.title')}</h2>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
 		<PaneCard variant="none" class="flex flex-col">
