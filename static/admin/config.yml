@@ -10,7 +10,7 @@
 
 backend:
   name: github
-  repo: 10Oliver/oliver-portfolio
+  repo: edream-enterprise/oliver-portfolio
   branch: main
   # Uncomment and set when deploying to Dokploy:
   # base_url: https://your-oauth-proxy.example.com
