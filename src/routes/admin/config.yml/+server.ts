@@ -1,39 +1,39 @@
-# Decap CMS Configuration
-# Docs: https://decapcms.org/docs/configuration-options/
+import { env } from '$env/dynamic/private';
+import type { RequestHandler } from './$types';
 
-# The `backend` block is REQUIRED even when using local_backend.
-# `local_backend: true` proxies requests through `npx decap-server`
-# so you can edit files locally, but the backend definition must exist.
-#
-# For production on Dokploy, add `base_url` pointing to your self-hosted
-# GitHub OAuth proxy (e.g. sveltia-cms-auth or a custom worker).
+function yamlValue(value: string): string {
+	return JSON.stringify(value);
+}
+
+function isEnabled(value: string | undefined): boolean {
+	return value === 'true' || value === '1';
+}
+
+export const GET: RequestHandler = () => {
+	const backendName = env.DECAP_BACKEND_NAME ?? 'github';
+	const repo = env.DECAP_REPO ?? 'edream-enterprise/oliver-portfolio';
+	const branch = env.DECAP_BRANCH ?? 'main';
+	const baseUrl = env.DECAP_BASE_URL;
+	const authEndpoint = env.DECAP_AUTH_ENDPOINT;
+	const localBackend = isEnabled(env.DECAP_LOCAL_BACKEND);
+
+	const config = `# Decap CMS Configuration
+# Generated at runtime so Dokploy environment variables can configure auth.
 
 backend:
-  name: github
-  repo: edream-enterprise/oliver-portfolio
-  branch: main
-  # Uncomment and set when deploying to Dokploy:
-  # base_url: https://your-oauth-proxy.example.com
-
-local_backend: true
-
-# ---------------------------------------------------------------------------
-# Media / Uploads
-# ---------------------------------------------------------------------------
+  name: ${yamlValue(backendName)}
+  repo: ${yamlValue(repo)}
+  branch: ${yamlValue(branch)}
+${baseUrl ? `  base_url: ${yamlValue(baseUrl)}\n` : ''}${authEndpoint ? `  auth_endpoint: ${yamlValue(authEndpoint)}\n` : ''}
+${localBackend ? 'local_backend: true\n' : ''}
 media_folder: "static/uploads"
 public_folder: "/uploads"
 
-# ---------------------------------------------------------------------------
-# Internationalization
-# ---------------------------------------------------------------------------
 i18n:
   structure: multiple_files
   locales: ["en", "es"]
   default_locale: "en"
 
-# ---------------------------------------------------------------------------
-# Collections
-# ---------------------------------------------------------------------------
 collections:
   - name: "blog"
     label: "Blog Posts"
@@ -71,3 +71,12 @@ collections:
           i18n: true }
       - { label: "Body", name: "body", widget: "markdown", required: true,
           i18n: true }
+`;
+
+	return new Response(config, {
+		headers: {
+			'Content-Type': 'text/yaml; charset=utf-8',
+			'Cache-Control': 'no-store'
+		}
+	});
+};

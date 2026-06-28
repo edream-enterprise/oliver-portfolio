@@ -32,14 +32,14 @@ RUN npm run build
 RUN npm prune --omit=dev
 
 # Stage 2: Create the distroless production image
-FROM gcr.io/distroless/nodejs22-debian12
+FROM gcr.io/distroless/nodejs22-debian12:nonroot
 
 WORKDIR /app
 
 # Copy production dependencies and built application
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/build ./build
-COPY --from=builder /app/package.json ./
+COPY --from=builder --chown=nonroot:nonroot /app/node_modules ./node_modules
+COPY --from=builder --chown=nonroot:nonroot /app/build ./build
+COPY --from=builder --chown=nonroot:nonroot /app/package.json ./
 
 # Configure environment variables for adapter-node
 ENV NODE_ENV=production
@@ -47,6 +47,8 @@ ENV PORT=3000
 
 # Expose the application port
 EXPOSE 3000
+
+USER nonroot
 
 # Run the application
 CMD ["build/index.js"]

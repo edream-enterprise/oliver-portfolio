@@ -14,7 +14,7 @@ export const GET: RequestHandler = () => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- The page is served at /admin (no trailing slash) by the SvelteKit endpoint.
          <base> ensures relative URLs (config.yml, etc.) resolve from /admin/ so
-         Decap fetches /admin/config.yml from static/admin/config.yml. -->
+         Decap fetches /admin/config.yml from the runtime SvelteKit endpoint. -->
     <base href="/admin/" />
     <title>Content Manager | Oliver's Portfolio</title>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js" defer></script>
