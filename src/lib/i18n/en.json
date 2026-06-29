@@ -64,31 +64,17 @@
 		"title": "/home/projects",
 		"prevProjects": "Previous projects",
 		"nextProjects": "Next projects",
-		"project1": {
-			"title": "NEOVIM CONFIG",
-			"description": "Minimalist and fast Neovim-based development environment optimized for modern web development (Vue, TS, JS). Features LSP, AI autocompletion (Copilot), advanced Git integration, and ultra-fast searching.",
-			"tags": ["Lua", "Markdown"]
-		},
-		"project2": {
-			"title": "SVELTE PORTFOLIO",
-			"description": "An interactive personal portfolio featuring a terminal and window manager style, developed with SvelteKit; it includes blog posts and a biography in Markdown format.",
-			"tags": ["Svelte", "Linux"]
-		},
-		"project3": {
-			"title": "COMMUNITY EVENTS APP",
-			"description": "A collaborative mobile application (university project) designed for managing events and attendance tracking. Developed using React Native, Expo, and Firebase.",
-			"tags": ["React Native", "Firebase"]
-		},
-		"project4": {
-			"title": "PERSONAL FINANCE APP",
-			"description": "A web application for personal finance management, tracking income and expenses. Developed using Laravel 12 and Blade, featuring custom accounts, categories, charts, and 2FA authentication.",
-			"tags": ["Laravel", "Blade"]
-		},
-		"project5": {
-			"title": "VUE 3 TEMPLATE",
-			"description": "A base template for rapid development of modern web applications using Vue 3 and Vuetify 3. Pre-configured with Pinia for state management and Vue Router.",
-			"tags": ["Vue 3", "Vuetify", "Vite"]
-		}
+		"viewAll": "[ ls -l /home/projects ]",
+		"repo": "[ repo ]",
+		"demo": "[ demo ]",
+		"pageTitle": "/home/projects",
+		"backCommand": "cd /home",
+		"countLabel": "projects",
+		"emptyState": "No projects found."
+	},
+	"projectsPage": {
+		"title": "Projects | Oliver's Portfolio",
+		"description": "A curated list of Oliver Alejandro Erazo Reyes' software projects."
 	},
 	"stack": {
 		"development": {

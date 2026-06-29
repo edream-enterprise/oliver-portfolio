@@ -71,6 +71,47 @@ collections:
           i18n: true }
       - { label: "Body", name: "body", widget: "markdown", required: true,
           i18n: true }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "src/lib/content/projects"
+    create: true
+    delete: true
+    i18n: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    preview_path: "projects"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true,
+          i18n: true }
+      - { label: "Slug", name: "slug", widget: "string", required: true,
+          hint: "Shared URL-friendly identifier, e.g. svelte-portfolio",
+          i18n: true }
+      - { label: "Description", name: "description", widget: "text", required: true,
+          hint: "Short summary shown in the home carousel and projects page.",
+          i18n: true }
+      - { label: "Tags", name: "tags", widget: "list", required: false,
+          hint: "Comma-separated list of tags, e.g. Svelte, Linux",
+          i18n: true }
+      - { label: "Repository URL", name: "repoUrl", widget: "string", required: false,
+          hint: "Optional link to the source repository.",
+          i18n: true }
+      - { label: "Demo URL", name: "demoUrl", widget: "string", required: false,
+          hint: "Optional link to a live demo.",
+          i18n: true }
+      - { label: "Order", name: "order", widget: "number", value_type: "int",
+          min: 0, default: 0, required: true,
+          hint: "Lower numbers appear first.",
+          i18n: true }
+      - { label: "Featured", name: "featured", widget: "boolean", default: true,
+          hint: "When enabled, this project appears in the home carousel.",
+          i18n: true }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false,
+          hint: "When enabled, this project is hidden from public pages in production.",
+          i18n: true }
+      - { label: "Body", name: "body", widget: "markdown", required: false,
+          i18n: true }
 `;
 
 	return new Response(config, {

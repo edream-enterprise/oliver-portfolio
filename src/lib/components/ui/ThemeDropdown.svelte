@@ -19,7 +19,11 @@
 	}
 </script>
 
-<svelte:window onkeydown={(e) => { if (e.key === 'Escape') globalState.themeDropdownOpen = false; }} />
+<svelte:window
+	onkeydown={(e) => {
+		if (e.key === 'Escape') globalState.themeDropdownOpen = false;
+	}}
+/>
 
 {#if globalState.themeDropdownOpen}
 	<!-- svelte-ignore a11y_click_events_have_key_events -->

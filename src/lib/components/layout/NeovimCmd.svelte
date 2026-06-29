@@ -53,13 +53,13 @@
 			e.preventDefault();
 			const val = command.trim();
 			if (!val) return;
-			
+
 			// Save to history
 			if (history[history.length - 1] !== val) {
 				history.push(val);
 			}
 			historyIndex = history.length;
-			
+
 			if (command.startsWith('/')) {
 				const searchTerm = command.slice(1);
 				if (searchTerm) {
@@ -76,7 +76,7 @@
 				if (!errorMsg) command = '';
 				return;
 			}
-			
+
 			const valLower = val.toLowerCase();
 			const cmdParts = valLower.split(' ');
 			const cmd = cmdParts[0];
@@ -89,12 +89,12 @@
 					const search = parts[1];
 					const replace = parts[2];
 					const flags = parts[3] || '';
-					
+
 					try {
 						const regex = new RegExp(search, flags.includes('g') ? 'g' : '');
 						walkAndReplace(document.body, regex, replace);
 						active = false;
-					} catch (e) {
+					} catch {
 						errorMsg = `E486: Invalid pattern: ${search}`;
 					}
 				} else {
@@ -168,16 +168,15 @@
 			} else if (cmd === 'hardcopy') {
 				// TODO: Implement CV download/print
 				errorMsg = 'Printing CV... (Not fully implemented yet)';
-				setTimeout(() => { 
+				setTimeout(() => {
 					active = false;
-					errorMsg = ''; 
+					errorMsg = '';
 				}, 1500);
 			} else {
 				errorMsg = `E492: Not an editor command: ${cmd}`;
 			}
-			
-			if (!errorMsg) command = '';
 
+			if (!errorMsg) command = '';
 		} else if (e.key === 'ArrowUp') {
 			e.preventDefault();
 			if (historyIndex > 0) {
@@ -197,23 +196,31 @@
 			e.preventDefault();
 			const val = command;
 			const cmdParts = val.split(' ');
-			
+
 			if (cmdParts.length === 1) {
 				const cmds = ['q', 'help', 'colorscheme', 'e', 'set', 'hardcopy', 'n', '%s/', 's/', 'glow'];
 				const exactIdx = cmds.indexOf(cmdParts[0].toLowerCase());
 				if (exactIdx !== -1) {
 					command = cmds[(exactIdx + 1) % cmds.length];
 				} else {
-					const match = cmds.find(c => c.startsWith(cmdParts[0].toLowerCase()));
+					const match = cmds.find((c) => c.startsWith(cmdParts[0].toLowerCase()));
 					if (match) command = match;
 				}
 			} else if (cmdParts.length === 2 && cmdParts[0].toLowerCase() === 'e') {
-				const routes = ['stack', 'architecture', 'projects', 'experience', 'contact', 'about', 'blog'];
+				const routes = [
+					'stack',
+					'architecture',
+					'projects',
+					'experience',
+					'contact',
+					'about',
+					'blog'
+				];
 				const exactIdx = routes.indexOf(cmdParts[1].toLowerCase());
 				if (exactIdx !== -1) {
 					command = `e ${routes[(exactIdx + 1) % routes.length]}`;
 				} else {
-					const match = routes.find(r => r.startsWith(cmdParts[1].toLowerCase()));
+					const match = routes.find((r) => r.startsWith(cmdParts[1].toLowerCase()));
 					if (match) command = `e ${match}`;
 					else command = `e ${routes[0]}`;
 				}
@@ -223,17 +230,26 @@
 				if (exactIdx !== -1) {
 					command = `set ${langs[(exactIdx + 1) % langs.length]}`;
 				} else {
-					const match = langs.find(l => l.startsWith(cmdParts[1].toLowerCase()));
+					const match = langs.find((l) => l.startsWith(cmdParts[1].toLowerCase()));
 					if (match) command = `set ${match}`;
 					else command = `set ${langs[0]}`;
 				}
 			} else if (cmdParts.length === 2 && cmdParts[0].toLowerCase() === 'colorscheme') {
-				const themes = ['default', 'dracula', 'gruvbox', 'light', 'tokyonight', 'onedarkpro', 'cyberpurple', 'abyss'];
+				const themes = [
+					'default',
+					'dracula',
+					'gruvbox',
+					'light',
+					'tokyonight',
+					'onedarkpro',
+					'cyberpurple',
+					'abyss'
+				];
 				const exactIdx = themes.indexOf(cmdParts[1].toLowerCase());
 				if (exactIdx !== -1) {
 					command = `colorscheme ${themes[(exactIdx + 1) % themes.length]}`;
 				} else {
-					const match = themes.find(t => t.startsWith(cmdParts[1].toLowerCase()));
+					const match = themes.find((t) => t.startsWith(cmdParts[1].toLowerCase()));
 					if (match) command = `colorscheme ${match}`;
 					else command = `colorscheme ${themes[0]}`;
 				}
@@ -286,12 +302,16 @@
 		bind:this={inputRef}
 		bind:value={command}
 		onkeydown={handleInputKeydown}
-		class="bg-transparent border-none outline-none ml-1 w-full {errorMsg ? 'text-error' : 'text-primary'}"
+		class="bg-transparent border-none outline-none ml-1 w-full {errorMsg
+			? 'text-error'
+			: 'text-primary'}"
 		type="text"
 		aria-label="Neovim Command Bar"
 	/>
 	{#if errorMsg}
-		<span class="absolute left-0 bottom-full w-full bg-error text-on-error px-2 py-1 text-sm border-t border-error">
+		<span
+			class="absolute left-0 bottom-full w-full bg-error text-on-error px-2 py-1 text-sm border-t border-error"
+		>
 			{errorMsg}
 		</span>
 	{/if}

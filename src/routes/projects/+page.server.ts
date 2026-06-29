@@ -1,10 +1,8 @@
-import { loadBlogPosts } from '$lib/blog';
 import { loadProjects } from '$lib/projects';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {
-	const latestPosts = loadBlogPosts();
 	const projects = loadProjects();
 
-	return { latestPosts, projects };
+	return { projects };
 };

@@ -3,7 +3,11 @@
 	import { _ } from 'svelte-i18n';
 </script>
 
-<svelte:window onkeydown={(e) => { if (e.key === 'Escape') globalState.helpModalOpen = false; }} />
+<svelte:window
+	onkeydown={(e) => {
+		if (e.key === 'Escape') globalState.helpModalOpen = false;
+	}}
+/>
 
 {#if globalState.helpModalOpen}
 	<!-- svelte-ignore a11y_click_events_have_key_events -->

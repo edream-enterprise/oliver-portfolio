@@ -24,7 +24,11 @@
 	}
 </script>
 
-<svelte:window onkeydown={(e) => { if (e.key === 'Escape') globalState.systemMonitorOpen = false; }} />
+<svelte:window
+	onkeydown={(e) => {
+		if (e.key === 'Escape') globalState.systemMonitorOpen = false;
+	}}
+/>
 
 {#if globalState.systemMonitorOpen}
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -64,13 +68,20 @@
 				<div><span class="text-secondary font-bold">{$_('systemInfo.os')}</span> SvelteKit 5</div>
 				<div><span class="text-secondary font-bold">{$_('systemInfo.wm')}</span> TailwindCSS 4</div>
 				<div><span class="text-secondary font-bold">{$_('systemInfo.shell')}</span> TypeScript</div>
-				<div><span class="text-secondary font-bold">{$_('systemInfo.terminal')}</span> Zsh + Oh My Zsh</div>
-				<div><span class="text-secondary font-bold">{$_('systemInfo.uptime')}</span> {formatUptime(uptime)}</div>
+				<div>
+					<span class="text-secondary font-bold">{$_('systemInfo.terminal')}</span> Zsh + Oh My Zsh
+				</div>
+				<div>
+					<span class="text-secondary font-bold">{$_('systemInfo.uptime')}</span>
+					{formatUptime(uptime)}
+				</div>
 				<div>
 					<span class="text-secondary font-bold">{$_('systemInfo.memory')}</span> 120MB / 16384MB
 				</div>
 				<div>
-					<span class="text-secondary font-bold">{$_('systemInfo.themes')}</span> 3 {$_('systemInfo.loaded')} ... 1 {$_('systemInfo.encrypted')}
+					<span class="text-secondary font-bold">{$_('systemInfo.themes')}</span> 3 {$_(
+						'systemInfo.loaded'
+					)} ... 1 {$_('systemInfo.encrypted')}
 				</div>
 
 				<div class="flex gap-1 mt-3">

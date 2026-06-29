@@ -15,7 +15,7 @@
 <ArchitectureSection />
 <ProfileSnippet />
 <ExperienceSection />
-<ProjectsSection />
+<ProjectsSection projects={data.projects} />
 <StackSection />
 <BlogSnippet posts={data.latestPosts} />
 <ContactSection />

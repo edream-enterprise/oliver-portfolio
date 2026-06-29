@@ -9,7 +9,9 @@
 			<div class="mb-4 flex items-center gap-2">
 				<span class="material-symbols-outlined text-primary" aria-hidden="true">code</span>
 				<h2 class="font-headline-md text-base sm:text-lg text-primary break-all">
-					<span class="hidden sm:inline">~/.config/stack/</span><span class="sm:hidden">~/.config/</span>{$_('stack.development.title')}
+					<span class="hidden sm:inline">~/.config/stack/</span><span class="sm:hidden"
+						>~/.config/</span
+					>{$_('stack.development.title')}
 				</h2>
 			</div>
 			<div class="bg-surface-dim pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">
@@ -68,7 +70,9 @@
 			<div class="mb-4 flex items-center gap-2">
 				<span class="material-symbols-outlined text-primary" aria-hidden="true">dns</span>
 				<h2 class="font-headline-md text-base sm:text-lg text-primary break-all">
-					<span class="hidden sm:inline">~/.config/stack/</span><span class="sm:hidden">~/.config/</span>{$_('stack.infrastructure.title')}
+					<span class="hidden sm:inline">~/.config/stack/</span><span class="sm:hidden"
+						>~/.config/</span
+					>{$_('stack.infrastructure.title')}
 				</h2>
 			</div>
 			<div class="bg-surface-dim pane-border p-6 rounded-none w-full overflow-x-auto flex-grow">

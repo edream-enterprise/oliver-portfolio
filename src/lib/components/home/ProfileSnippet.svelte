@@ -7,7 +7,9 @@
 <section class="py-16 border-b border-outline-variant" id="profile">
 	<div class="mb-8 flex items-center gap-2">
 		<span class="material-symbols-outlined text-primary" aria-hidden="true">person</span>
-		<h2 class="font-headline-md text-base sm:text-lg text-primary break-all">{$_('profile.title')}</h2>
+		<h2 class="font-headline-md text-base sm:text-lg text-primary break-all">
+			{$_('profile.title')}
+		</h2>
 	</div>
 	<PaneCard variant="none" class="gap-4">
 		<p class="font-body-lg text-on-surface">

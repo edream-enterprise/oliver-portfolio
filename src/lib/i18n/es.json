@@ -64,31 +64,17 @@
 		"title": "/home/proyectos",
 		"prevProjects": "Proyectos anteriores",
 		"nextProjects": "Proyectos siguientes",
-		"project1": {
-			"title": "CONFIGURACIÓN NEOVIM",
-			"description": "Entorno de desarrollo minimalista y rápido basado en Neovim optimizado para desarrollo web moderno (Vue, TS, JS). Incluye LSP, autocompletado con IA (Copilot), integración avanzada de Git y búsqueda ultra rápida.",
-			"tags": ["Lua", "Markdown"]
-		},
-		"project2": {
-			"title": "PORTAFOLIO SVELTE",
-			"description": "Un portafolio personal interactivo con estilo de terminal y gestor de ventanas, desarrollado con SvelteKit; incluye publicaciones de blog y una biografía en formato Markdown.",
-			"tags": ["Svelte", "Linux"]
-		},
-		"project3": {
-			"title": "APP DE EVENTOS COMUNITARIOS",
-			"description": "Una aplicación móvil colaborativa (proyecto universitario) diseñada para gestionar eventos y seguimiento de asistencia. Desarrollada usando React Native, Expo y Firebase.",
-			"tags": ["React Native", "Firebase"]
-		},
-		"project4": {
-			"title": "APP DE FINANZAS PERSONALES",
-			"description": "Una aplicación web para gestión de finanzas personales, seguimiento de ingresos y gastos. Desarrollada usando Laravel 12 y Blade, con cuentas personalizadas, categorías, gráficos y autenticación 2FA.",
-			"tags": ["Laravel", "Blade"]
-		},
-		"project5": {
-			"title": "PLANTILLA VUE 3",
-			"description": "Una plantilla base para desarrollo rápido de aplicaciones web modernas usando Vue 3 y Vuetify 3. Preconfigurada con Pinia para gestión de estado y Vue Router.",
-			"tags": ["Vue 3", "Vuetify", "Vite"]
-		}
+		"viewAll": "[ ls -l /home/proyectos ]",
+		"repo": "[ repo ]",
+		"demo": "[ demo ]",
+		"pageTitle": "/home/proyectos",
+		"backCommand": "cd /home",
+		"countLabel": "proyectos",
+		"emptyState": "No se encontraron proyectos."
+	},
+	"projectsPage": {
+		"title": "Proyectos | Portafolio de Oliver",
+		"description": "Una lista curada de proyectos de software de Oliver Alejandro Erazo Reyes."
 	},
 	"stack": {
 		"development": {

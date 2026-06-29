@@ -8,7 +8,9 @@
 <section class="py-16" id="contact">
 	<div class="mb-8 flex items-center gap-2">
 		<span class="material-symbols-outlined text-primary" aria-hidden="true">mail</span>
-		<h2 class="font-headline-md text-base sm:text-lg text-primary break-all">{$_('contact.title')}</h2>
+		<h2 class="font-headline-md text-base sm:text-lg text-primary break-all">
+			{$_('contact.title')}
+		</h2>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
 		<PaneCard variant="none" class="flex flex-col">
@@ -59,8 +61,9 @@
 				</div>
 				<div class="flex flex-col sm:flex-row sm:justify-between gap-1">
 					<span class="text-primary flex-shrink-0">{$_('contact.network.linkedin')}</span>
-					<a class="text-secondary hover:underline break-all" href="https://linkedin.com/in/oliver-erazo"
-						>{$_('contact.network.linkedinUrl')}</a
+					<a
+						class="text-secondary hover:underline break-all"
+						href="https://linkedin.com/in/oliver-erazo">{$_('contact.network.linkedinUrl')}</a
 					>
 				</div>
 				<div class="flex flex-col sm:flex-row sm:justify-between gap-1">
